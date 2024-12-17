@@ -188,7 +188,7 @@ body .container .right .group::-webkit-scrollbar{
 
     body .container .right {
         flex: 1;
-        background-color: rgb(226, 226, 226);
+        background-color: rgb(255, 255, 255);
     } 
     
     body .container .right .group{
@@ -212,7 +212,7 @@ body .container .right .group::-webkit-scrollbar{
     }
 
     #searchBar{
-        width: 80%;
+        width: 86%;
         padding: 10px;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -227,7 +227,7 @@ body .container .right .group::-webkit-scrollbar{
         margin: 10px;
         border-radius: 5px;
         border: 1px solid black;
-        width: 80%;
+        width: 86%;
         text-align: left;
     }
 
@@ -246,7 +246,7 @@ body .container .right .group::-webkit-scrollbar{
 
 
     body .container .left .links-languages {
-        margin-top: 20px;
+        margin-top: 37px;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -264,9 +264,37 @@ body .container .right .group::-webkit-scrollbar{
     }
 
     body .container .left .about {
-        margin-top: 30px;
+        margin-top: 40px;
         height: 37%; 
         width: 100%; 
     }
+
+
+body .container .left .about p {
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+body .container .left .about h3 {
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+body .container .left .links-languages h3 {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+body .container .left .links-languages a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 25px;
+}
 
 }
