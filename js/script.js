@@ -26,7 +26,7 @@ const projects = [
     {name: "Formulário Web - Python, SQLITE", description: "Aplicação para registro de informações do usuário, utilizando a linguagem Python e a biblioteca Flask para o back-end. O banco de dados utilizado é o SQLite.", repository: "https://github.com/GustavoST868/formulario_de_registro_web_python"},
     {name: "Algoritmos - C", description: "Repositório com algoritmos desenvolvidos em linguagem C, com o objetivo de treinar lógica de programação.", repository: "https://github.com/GustavoST868/algoritmos_em_c"},
     {name: "Portfólio Simples - HTML,CSS,JavaScript", description: "Portfolio simples, voltado a mostrar as informações de modo claro. ", repository: "https://github.com/GustavoST868/Portfolio-Simples"},
-    {name: "Anotações Referentes a Livros", description: "Repositório para guardar anotações que fiz durante a leitura de livros.", repository: "https://github.com/GustavoST868/Anotacoes-Livros"},
+    {name: "Anotações e Resumos Referentes a Livros", description: "Repositório para guardar anotações que fiz durante a leitura de livros.", repository: "https://github.com/GustavoST868/Anotacoes-Livros"},
     {name: "Cia de Pulverização - JavaScritp, Vite, CSS e HTML", description: "Algoritmo destinado a resolver um problema de programação. ", repository: "https://github.com/GustavoST868/cia-de-pulverizacao.git"}
 ];
 
