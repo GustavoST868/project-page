@@ -16,7 +16,7 @@
 }
 
 
-@media (max-width:320px) {
+@media (max-width:500px) {
     .title-component{
         font-size: 110%;
         color: rgb(100, 100, 100);
