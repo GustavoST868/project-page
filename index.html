@@ -1,39 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./icon/portfolio.png">
-    <title>Portfolio</title>
+    <link rel="icon" href="./icon/projetos.png">
+    <title>Projetos</title>
 </head>
 <body>
     <div class="container">
-        <div class="left">
-            <div class="image-name">
-                <img src="./img/image.png" alt="">
-                <h1>Gustavo Santos Teixeira</h1>
-            </div>
-            <div class="about">
-                <h3>Sobre:</h3> 
-                <p>Iniciei o curso de graduação em Ciência da Computação em 2022. Desde então, utilizei linguagens como Python, C e Java. Constantemente busco aprender e utilizar novas ferramentas para aprimorar meus conhecimentos. Tenho uma forte preferência por trabalho em equipe. Sou disciplinado e consistente na busca por novos conhecimentos e aprendizado contínuo. </p>
-            </div>
-            <div class="links-languages">
-                <h3>Contato:</h3>
-                <a href="https://www.instagram.com/g_us_tav_o/"><span>Instagram</span></a>
-                <a href="https://mail.google.com/mail/u/0/?fs=1&to=gustavosantosteixeira98@gmail.com&su=Assunto&body=Corpo+do+email&tf=cm"><span>Email</span></a>
-                <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b"><span>Linkedin</span></a>
-                <a href="https://github.com/GustavoST868"><span>Github</span></a>
-            </div>
+        <div class="title">
+            <p class="title-component">Projetos</p>
         </div>
-        <div class="right">
-            <div class="group">
-                <input type="text" id="searchBar" placeholder="Nome do projeto">
-                <div class="projects" id="projectsList"></div>
+        <div class="content">
+            <div class="square-projects">
+
+                <div class="projetc">
+                    <p class="project-title">Link Page</p>
+                    <p class="component-projects">Tecnologias: </p>
+                    <p class="component-projects">HTML, CSS e JavaScript</p>
+                    <p class="component-projects">Descrição:</p>
+                    <p class="component-projects">
+                        O objetivo deste projeto foi criar uma página simples para reunir todos os links relacionado a mim.
+                        Construí a estrutura do projeto com o Vite e fiz a janela o mais simples possível.
+                        Na interface, estão disponíveis os links para o GitHub, Linkedin, Instagram, currículo e página de projetos.
+                    </p>
+                    <br>
+                    <a href="https://github.com/GustavoST868/links_page" class="ref-project">GitHub</a>
+                </div>
+
+                <div class="projetc">
+                    <p class="project-title">Sistemas de Lista de Tarefas</p>
+                    <p class="component-projects">Tecnologias: </p>
+                    <p class="component-projects">Java</p>
+                    <p class="component-projects">Descrição:</p>
+                    <p class="component-projects">
+                        Criar um algoritmo que tenhas as funcionalidades de criar, deletar, pesquisar,
+                        editar tarefas e mostrar tarefas no prompt. Outros recursos implementados foram a 
+                        listagem de usuário criados, retornar a lista de prioridade de tarefas, conteúdos,
+                        usuários, criptografia e descriptografia por algoritmo simples, e uma classe para
+                        verificar o tipo dos dados que chegavam, com intuito de alterar o modo como o 
+                        algoritmo lida com a entrada dado o tipo da informação.</p>
+                    <br>
+                    <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="ref-project">GitHub</a>
+                </div>
+            </div>
+
+            <div class="square-projects" style="">
+
+
+                <div class="projetc">
+                    <p class="project-title">API de Usuários</p>
+                    <p class="component-projects">Tecnologias: </p>
+                    <p class="component-projects">Java e SpringBoot</p>
+                    <p class="component-projects">Descrição:</p>
+                    <p class="component-projects">
+                        Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos
+                        para armazenar e carregar os usuários e senhas. A classe User possui métodos para 
+                        getters e setters simples, juntamente com métodos para criação, deleção, atualização,
+                        verificação de existência e disponibilização dos dados. Além de métodos para contagem
+                        dos usuários armazenados.
+                    </p>
+                    <br>
+                    <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios" class="ref-project">GitHub</a>
+                </div>
+
+                <div class="projetc">
+                    <p class="project-title">Formulário de Registro Web</p>
+                    <p class="component-projects">Tecnologias: </p>
+                    <p class="component-projects">Python, HTML, CSS  e JavaScript</p>
+                    <p class="component-projects">Descrição:</p>
+                    <p class="component-projects">
+                        Projeto para receber dados de um usuário e salvá-lo em uma espécie de banco de dados.
+                        Utilizei Flask Python para subir a aplicação para o local host e armazenei os dados em um banco SQLite.
+                        Como os dados remetiam a um período de validade, com seu vencimento, os dados referentes aquele registro eram apagados automaticamente. 
+                        Implementei uma página para mostrar os dados em forma de tabela e rotas para gerenciar as informações.
+                    </p>
+                    <br>
+                    <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="ref-project">GitHub</a>        
+                </div>
+
             </div>
         </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
-<script src="./js/script.js"></script>
 </html>
-

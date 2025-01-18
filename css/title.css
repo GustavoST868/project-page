@@ -1,0 +1,25 @@
+.title{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8%;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.title-component{
+    font-size: 170%;
+    color: rgb(100, 100, 100);
+}
+
+
+@media (max-width:320px) {
+    .title-component{
+        font-size: 110%;
+        color: rgb(100, 100, 100);
+    }
+}
+
