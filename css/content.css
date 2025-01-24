@@ -49,6 +49,8 @@
     text-decoration: none;
 }
 
+
+
 @keyframes animation-opacity {
     0%{
         opacity: 0%;
@@ -60,6 +62,7 @@
 }
 
 @media (max-width:500px) {
+
     .square-projects{
         display: flex;
         align-items: center;
@@ -92,6 +95,7 @@
 
     .project-title{
         margin-left: 10%;
+        margin-right: 10%;
         margin-top: 10%;
         color: rgb(100, 100, 100);
         font-size: 130%;
