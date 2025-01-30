@@ -1,0 +1,39 @@
+.apresentation{
+    font-family: 'Lora', serif;
+    text-align: justify;
+    margin-top: 70px;
+    margin-left: 0.5%;
+    width: 99%;
+    height: auto;
+    border: 0px solid black;
+    animation: effect 1s;
+    
+}
+
+.apresentation-title{
+    color: rgb(107, 104, 104);
+    font-size: 160%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-right: 5%;
+}
+
+.apresentation-content{
+    color: rgb(107, 104, 104);
+    font-size: 110%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-right: 5%;
+}
+
+
+@media (max-width:500px) {
+    .apresentation-title{ 
+        font-size: 120%; 
+    }
+    
+    .apresentation-content{
+        font-size: 100%;
+    }
+     
+}

@@ -1,0 +1,17 @@
+.icon-links{
+    animation: effect 1s;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0.5%;
+    width: 99%;
+    height: 50px;
+    border: 0px solid black;
+}
+
+.icon-links img{
+    margin-top: 20px;
+    margin-left: 0.5%;
+    width: 40px;
+    height: 40px;
+}
