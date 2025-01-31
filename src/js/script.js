@@ -9,7 +9,6 @@ const projetos = [
         deploy: ""
     },
 
-
     {
         name: "Sistemas de Lista de Tarefas",
         technologies: ["Java"],
@@ -18,7 +17,6 @@ const projetos = [
         deploy: ""
     },
 
-
     {
         name: "API de Usuários",
         technologies: ["Java", "SpringBoot"],
@@ -26,7 +24,6 @@ const projetos = [
         repository: "https://github.com/GustavoST868/java/tree/main/api-usuarios",
         deploy: ""
     },
-
 
     {
         name: "Formulário de Registro Web",
@@ -51,7 +48,6 @@ const projetos = [
 function exibirProjetos() {
     const container = document.getElementById("project-insert"); 
 
-  
     projetos.forEach(projeto => {
         const divProjeto = document.createElement("div");
         divProjeto.classList.add("project");
@@ -59,9 +55,8 @@ function exibirProjetos() {
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<br><strong style='color: rgb(92, 92, 92);font-size:110%;margin-top:10px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<br><strong style='color: rgb(42, 34, 87);font-size:110%;margin-top:10px'>"+projeto.name+"</strong>";
 
-      
         const tecnologias = document.createElement("p");
         tecnologias.classList.add("project-technologies"); 
         tecnologias.innerHTML = "<strong>Tecnologias:</strong>" +"<br>"+projeto.technologies.join(", ");
@@ -78,7 +73,6 @@ function exibirProjetos() {
         repositorio.innerHTML = '<p style = "margin-top: -15px;color: rgb(73, 73, 250);" >GitHub</p>';
         repositorio.target = "_blank"; 
 
-        
         const deploy = projeto.deploy ? document.createElement("a") : null;
         if (deploy) {
             deploy.classList.add("project-deploy");
