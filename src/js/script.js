@@ -51,7 +51,6 @@ function exibirProjetos() {
     projetos.forEach(projeto => {
         const divProjeto = document.createElement("div");
         divProjeto.classList.add("project");
-
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
@@ -81,7 +80,6 @@ function exibirProjetos() {
             deploy.target = "_blank"; 
         }
 
-        
         divProjeto.appendChild(nome);
         divProjeto.appendChild(tecnologias);
         divProjeto.appendChild(descricao);
