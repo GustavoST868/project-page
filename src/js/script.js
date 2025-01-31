@@ -59,7 +59,7 @@ function exibirProjetos() {
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<strong style='color:rgb(107, 104, 104);font-size:110%;'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<strong style='color: rgb(0, 0, 172);font-size:110%;'>"+projeto.name+"</strong>";
 
       
         const tecnologias = document.createElement("p");

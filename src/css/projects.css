@@ -1,6 +1,6 @@
 .project-title{
     margin-top: 70px;
-    width: 110%;
+    width: 100%;
     height: auto;
     border: 0px solid black;
     animation: effect 1s;
@@ -9,7 +9,7 @@
 .title{
     font-family: 'Lora', serif;
     margin-left: 5%;
-    font-size: 110%;
+    font-size: 130%;
     color: rgb(107, 104, 104);
 }
 
