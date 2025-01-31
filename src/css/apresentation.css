@@ -2,19 +2,20 @@
     font-family: 'Lora', serif;
     text-align: justify;
     margin-top: 70px;
+    margin-bottom: -19px;
     margin-left: 0.5%;
     width: 99%;
     height: auto;
-    border: 0px solid black;
     animation: effect 1s;
-    
+    border: 0.5px solid rgb(231, 231, 231);
+    border-radius: 5px;
 }
 
 .apresentation-title{
     color: rgb(107, 104, 104);
     font-size: 160%;
     margin-left: 5%;
-    margin-top: 1%;
+    margin-top: 0%;
     margin-right: 5%;
 }
 
