@@ -32,16 +32,16 @@
 
 @media (max-width:600px) {
 
-.apresentation-title{
-    color: rgb(0, 33, 94);
-    font-size: 90%;
-}
+    .apresentation-title{
+        color: rgb(0, 33, 94);
+        font-size: 110%;
+    }
 
-.apresentation-content{
-    text-align: justify;
-    color: rgb(0, 33, 94);
-    font-size: 90%;
-}
+    .apresentation-content{
+        text-align: justify;
+        color: rgb(0, 33, 94);
+        font-size: 110%;
+    }
 
     .about{
         margin-top: -25%;
