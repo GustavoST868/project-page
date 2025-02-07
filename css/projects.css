@@ -1,0 +1,62 @@
+.container-project{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.project-content{
+    animation: animation-opacity 2s;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.project-content p{
+    color: rgb(0, 33, 94);;
+}
+
+@media (max-width:600px) {
+    .container-project{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+    
+    .project-content{
+        text-align: justify;
+        margin-left: 10%;
+        margin-right: 15%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    
+    .project-content p{
+        color: rgb(0, 33, 94);;
+    }
+
+    .project-name{
+        font-size: 90%;
+    }
+
+    .project-technologies{
+        font-size: 90%;
+    }
+
+    .project-description{
+        font-size: 90%;
+    }
+
+    .project-repository{
+        font-size: 90%;
+    }
+
+    .project-deploy{
+        font-size: 90%;   
+    }
+}

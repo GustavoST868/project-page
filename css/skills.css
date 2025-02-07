@@ -1,0 +1,36 @@
+.skills{
+    animation: animation-opacity 2s;
+    width: 50%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.skills-title{
+    color: rgb(0, 33, 94);
+    font-size: 110%;
+}
+
+.skills-content{
+    color: rgb(0, 33, 94);
+    font-size: 110%;
+}
+
+@media (max-width:600px) {
+    .skills-title{
+        color: rgb(0, 33, 94);
+        font-size: 90%;
+    }
+    
+    .skills-content{
+        color: rgb(0, 33, 94);
+        font-size: 90%;
+    }
+    
+    .skills{
+        margin-top: -15%;
+        animation: animation-opacity 1s;
+        width: 60%;
+        height: 40%;
+        background-color: #ffffff;
+    }
+}

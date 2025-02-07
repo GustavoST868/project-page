@@ -1,16 +1,18 @@
-@import url('./container.css');
-@import url('./apresentation.css');
-@import url('./icon-links.css');
-@import url('./projects.css');
+@import url('container.css');
+@import url('left.css');
+@import url('right.css');
+@import url('about.css');
+@import url('skills.css');
+@import url('projects.css');
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html{
     width: 100%;
-    height: 100%;
+    height:100%;
 }
 
 body{
@@ -18,11 +20,11 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height:100%;
 }
 
 
-@keyframes effect {
+@keyframes animation-opacity {
     0%{
         opacity: 0%;
     }

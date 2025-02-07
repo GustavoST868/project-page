@@ -1,4 +1,3 @@
-// Array de projetos
 const projetos = [
 
     {
@@ -44,17 +43,55 @@ const projetos = [
    
 ];
 
+function About(){
+    const right = document.getElementById('right');
+    right.innerHTML = `
+        <div class="about" id="about">
+            <p class="apresentation-title">Olá, meu nome é <strong style="color: rgb(42, 34, 87);">Gustavo</strong>,</p>
+                <p class="apresentation-content"> 
+                    Sou estudante de Ciência da Computação na Universidade Federal de Jataí.
+                    Construí esta página para mostrar os projetos que desenvolvi ao longo da minha trajetória na programação. 
+                    Ela conterá uma descrição detalhada das ferramentas e da lógica que utilizei para criar os algoritmos.
+                </p>
+            <div class="icon-link">
+                <a href="https://github.com/GustavoST868"><img src="./icon/github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b"><img src="./icon/linkedin.png" alt="" style="margin-left: 1%;"></a>
+            </div>
+        </div>
+    `;
+    document.getElementById('button-skills').addEventListener('click',Skills);
+}
 
-function exibirProjetos() {
-    const container = document.getElementById("project-insert"); 
+function Skills(){
+    const right = document.getElementById('right');
+    right.innerHTML = `
+        <div class="skills" id="skills">
+            <p class="skills-title"><strong style="color: rgb(42, 34, 87);">Habilidades</strong></p>
+                <p class="skills-content">HTML, CSS e JavaScript (Intermediário)</p>
+                <p class="skills-content">C e Java (Intermediário)</p>
+                <p class="skills-content">SQL (Intermediário)</p>
+                <p class="skills-content">MariaDB e PostgreSQL (Intermediário)</p>
+        </div>
+    `;
+}
+
+function Projects(){
+    const right = document.getElementById('right');
+    right.innerHTML = `
+        <div class="container-project" id="container-project">
+            
+        </div>
+    `;
+
+    const container = document.getElementById("container-project"); 
 
     projetos.forEach(projeto => {
         const divProjeto = document.createElement("div");
-        divProjeto.classList.add("project");
+        divProjeto.classList.add("project-content");
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<br><strong style='color: rgb(42, 34, 87);font-size:110%;margin-top:10px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<br><strong style='color: rgb(0, 33, 94);font-size:110%;margin-top:10px'>"+projeto.name+"</strong>";
 
         const tecnologias = document.createElement("p");
         tecnologias.classList.add("project-technologies"); 
@@ -69,14 +106,14 @@ function exibirProjetos() {
         const repositorio = document.createElement("a");
         repositorio.classList.add("project-repository"); 
         repositorio.href = projeto.repository;
-        repositorio.innerHTML = '<p style = "margin-top: -15px;color: rgb(73, 73, 250);" >GitHub</p>';
+        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 33, 94);text-decoration:none;" >GitHub</p>';
         repositorio.target = "_blank"; 
 
         const deploy = projeto.deploy ? document.createElement("a") : null;
         if (deploy) {
             deploy.classList.add("project-deploy");
             deploy.href = projeto.deploy;
-            deploy.innerHTML = '<p style = "margin-top: -15px;color: rgb(73, 73, 250);">Deploy</p>';
+            deploy.innerHTML = '<p style = "margin-top: -15px;color: rgb(0, 33, 94);">Deploy</p>';
             deploy.target = "_blank"; 
         }
 
@@ -90,4 +127,9 @@ function exibirProjetos() {
     });
 }
 
-window.onload = exibirProjetos;
+
+About();
+
+document.getElementById('button-about').addEventListener('click',About);
+document.getElementById('button-skills').addEventListener('click',Skills);
+document.getElementById('button-projects').addEventListener('click',Projects);
