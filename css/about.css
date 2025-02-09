@@ -7,13 +7,13 @@
 
 .apresentation-title{
     color: rgb(0, 33, 94);
-    font-size: 110%;
+    font-size: 150%;
 }
 
 .apresentation-content{
     text-align: justify;
     color: rgb(0, 33, 94);
-    font-size: 110%;
+    font-size: 150%;
 }
 
 .icon-link{
@@ -26,8 +26,8 @@
 
 .icon-link img{  
     margin-top: 20%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 @media (max-width:600px) {
