@@ -29,8 +29,8 @@
     .skills{
         margin-top: -15%;
         animation: animation-opacity 1s;
-        width: 70%;
-        height: 40%;
+        width: auto;
+        height: auto;
         background-color: #ffffff;
     }
 }
