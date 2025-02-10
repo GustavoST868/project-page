@@ -120,22 +120,14 @@ function Projects(){
             deploy.target = "_blank"; 
         }
 
-        // Corrigir a inserção da imagem criando um elemento separado
-        const imgDiv = document.createElement("div");
-        imgDiv.classList.add("project-image"); // Adiciona uma classe para estilizar a imagem
-
-        const img = document.createElement("img");
-        img.src = projeto.image;
-        img.alt = projeto.name; // Coloque um alt relevante
-        imgDiv.appendChild(img); // Adiciona a imagem ao div
         
-        // Adiciona os elementos ao projeto
+        
         divProjeto.appendChild(nome);
         divProjeto.appendChild(tecnologias);
         divProjeto.appendChild(descricao);
         divProjeto.appendChild(repositorio);
         if (deploy) divProjeto.appendChild(deploy);
-        divProjeto.appendChild(imgDiv); // Coloca o contêiner da imagem no final
+   
         
         container.appendChild(divProjeto);
     });
