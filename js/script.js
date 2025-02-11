@@ -1,15 +1,6 @@
 const projetos = [
 
     {
-        name: "Link Page",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        description: "O objetivo deste projeto foi criar uma página simples para reunir todos os links relacionado a mim. Construí a estrutura do projeto com o Vite e fiz a janela o mais simples possível. Na interface, estão disponíveis os links para o GitHub, Linkedin, Instagram, currículo e página de projetos.",
-        repository: "https://github.com/GustavoST868/links_page",
-        deploy: "",
-        image: "./img/link-page.png",
-    },
-
-    {
         name: "Sistemas de Lista de Tarefas",
         technologies: ["Java"],
         description: "Criar um algoritmo que tenhas as funcionalidades de criar, deletar, pesquisar, editar tarefas e mostrar tarefas no prompt. Outros recursos implementados foram a listagem de usuário criados, retornar a lista de prioridade de tarefas, conteúdos, usuários, criptografia e descriptografia por algoritmo simples, e uma classe para verificar o tipo dos dados que chegavam, com intuito de alterar o modo como o algoritmo lida com a entrada dado o tipo da informação.",
@@ -96,7 +87,7 @@ function Projects(){
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<br><strong style='color: rgb(0, 33, 94);font-size:110%;margin-top:10px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<br><strong style='color: rgb(0, 33, 94);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
 
         const tecnologias = document.createElement("p");
         tecnologias.classList.add("project-technologies"); 
@@ -116,7 +107,7 @@ function Projects(){
         if (deploy) {
             deploy.classList.add("project-deploy");
             deploy.href = projeto.deploy;
-            deploy.innerHTML = '<p style = "margin-top: -15px;color: rgb(0, 89, 255);">Deploy</p>';
+            deploy.innerHTML = '<p style = "margin-top: 0px;color: rgb(0, 89, 255);">Deploy</p>';
             deploy.target = "_blank"; 
         }
 

@@ -23,14 +23,14 @@
 }
 
 .project-image {
-    margin-top: 20px; /* Espaço para a imagem */
-    text-align: left; /* Centraliza a imagem */
+    margin-top: 20px; 
+    text-align: left; 
     background-color: none;
 }
 
 .project-image img {
-    max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela, se necessário */
-    max-height: 550px; /* Mantém a proporção da imagem */
+    max-width: 100%; 
+    max-height: 550px; 
     
 }
 
@@ -52,14 +52,15 @@
 }
 
 .project-deploy{
+    text-decoration:none;
     font-size: 120%;  
 }
 
 
 @media (max-width:600px) {
     .project-image {
-        margin-top: 20px; /* Espaço para a imagem */
-        text-align: center; /* Centraliza a imagem */
+        margin-top: 20px; 
+        text-align: center; 
         background-color: none;
     }
 
