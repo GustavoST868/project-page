@@ -55,21 +55,8 @@ function About(){
             </div>
         </div>
     `;
-    document.getElementById('button-skills').addEventListener('click',Skills);
 }
 
-function Skills(){
-    const right = document.getElementById('right');
-    right.innerHTML = `
-        <div class="skills" id="skills">
-            <p class="skills-title"><strong style="color: rgb(42, 34, 87);">Habilidades</strong></p>
-                <p class="skills-content">HTML, CSS e JavaScript (Intermediário)</p>
-                <p class="skills-content">C e Java (Intermediário)</p>
-                <p class="skills-content">SQL (Intermediário)</p>
-                <p class="skills-content">MariaDB e PostgreSQL (Intermediário)</p>
-        </div>
-    `;
-}
 
 function Projects(){
     const right = document.getElementById('right');
@@ -128,5 +115,4 @@ function Projects(){
 About();
 
 document.getElementById('button-about').addEventListener('click',About);
-document.getElementById('button-skills').addEventListener('click',Skills);
 document.getElementById('button-projects').addEventListener('click',Projects);
