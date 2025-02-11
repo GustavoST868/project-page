@@ -109,14 +109,14 @@ function Projects(){
         const repositorio = document.createElement("a");
         repositorio.classList.add("project-repository"); 
         repositorio.href = projeto.repository;
-        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 33, 94);text-decoration:none;" >GitHub</p>';
+        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 89, 255);" >GitHub</p>';
         repositorio.target = "_blank"; 
 
         const deploy = projeto.deploy ? document.createElement("a") : null;
         if (deploy) {
             deploy.classList.add("project-deploy");
             deploy.href = projeto.deploy;
-            deploy.innerHTML = '<p style = "margin-top: -15px;color: rgb(0, 33, 94);">Deploy</p>';
+            deploy.innerHTML = '<p style = "margin-top: -15px;color: rgb(0, 89, 255);">Deploy</p>';
             deploy.target = "_blank"; 
         }
 

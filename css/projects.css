@@ -48,10 +48,11 @@
 
 .project-repository{
     font-size: 120%;
+    text-decoration: none;
 }
 
 .project-deploy{
-    font-size: 120%;   
+    font-size: 120%;  
 }
 
 
