@@ -6,13 +6,13 @@
 }
 
 .apresentation-title{
-    color: rgb(0, 33, 94);
+    color: rgb(1, 24, 66);
     font-size: 150%;
 }
 
 .apresentation-content{
     text-align: justify;
-    color: rgb(0, 33, 94);
+    color: rgb(1, 24, 66);
     font-size: 150%;
 }
 
@@ -33,13 +33,13 @@
 @media (max-width:600px) {
 
     .apresentation-title{
-        color: rgb(0, 33, 94);
+        color: rgb(1, 24, 66);
         font-size: 110%;
     }
 
     .apresentation-content{
         text-align: justify;
-        color: rgb(0, 33, 94);
+        color: rgb(1, 24, 66);
         font-size: 110%;
     }
 

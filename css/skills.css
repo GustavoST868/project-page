@@ -6,23 +6,23 @@
 }
 
 .skills-title{
-    color: rgb(0, 33, 94);
+    color: rgb(1, 24, 66);
     font-size: 150%;
 }
 
 .skills-content{
-    color: rgb(0, 33, 94);
+    color: rgb(1, 24, 66);
     font-size: 150%;
 }
 
 @media (max-width:600px) {
     .skills-title{
-        color: rgb(0, 33, 94);
+        color: rgb(1, 24, 66);
         font-size: 110%;
     }
     
     .skills-content{
-        color: rgb(0, 33, 94);
+        color: rgb(1, 24, 66);
         font-size: 110%;
     }
     
