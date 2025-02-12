@@ -5,8 +5,7 @@ const projetos = [
         technologies: ["Java"],
         description: "Criar um algoritmo que tenhas as funcionalidades de criar, deletar, pesquisar, editar tarefas e mostrar tarefas no prompt. Outros recursos implementados foram a listagem de usuário criados, retornar a lista de prioridade de tarefas, conteúdos, usuários, criptografia e descriptografia por algoritmo simples, e uma classe para verificar o tipo dos dados que chegavam, com intuito de alterar o modo como o algoritmo lida com a entrada dado o tipo da informação.",
         repository: "https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas",
-        deploy: "",
-        image: "#",
+        deploy: ""
     },
 
     {
@@ -14,8 +13,7 @@ const projetos = [
         technologies: ["Java", "SpringBoot"],
         description: "Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos para armazenar e carregar os usuários e senhas. A classe User possui métodos para getters e setters simples, juntamente com métodos para criação, deleção, atualização, verificação de existência e disponibilização dos dados. Além de métodos para contagem dos usuários armazenados.",
         repository: "https://github.com/GustavoST868/java/tree/main/api-usuarios",
-        deploy: "",
-        image: "",
+        deploy: ""
     },
 
     {
@@ -23,8 +21,7 @@ const projetos = [
         technologies: ["HTML", "CSS", "JavaScript", "Python"],
         description: "Projeto para receber dados de um usuário e salvá-lo em uma espécie de banco de dados. Utilizei Flask Python para subir a aplicação para o local host e armazenei os dados em um banco SQLite. Como os dados remetiam a um período de validade, com seu vencimento, os dados referentes aquele registro eram apagados automaticamente. Implementei uma página para mostrar os dados em forma de tabela e rotas para gerenciar as informações.",
         repository: "https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python",
-        deploy: "",
-        image: "",
+        deploy: ""
     },
 
 
@@ -33,11 +30,20 @@ const projetos = [
         technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL","C#","ASP .NET"],
         description: "Criei um formulário simples que consome uma API, ambos ASP .NET. A API gerencia a troca de informações e operações entre o banco de dados PostgreSQL e a aplicação Web. Implementei métodos e rotas relacionados as operações básicas(CRUD).",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net",
-        deploy: "",
-        image: "./img/formulario-dotnet.jpg",
+        deploy: ""
     },
    
 ];
+
+
+const reposit = [
+    {
+        name: "teste",
+        number_files: "teste",
+        description: "teste"
+    },
+];
+
 
 function About(){
     const right = document.getElementById('right');
@@ -53,6 +59,15 @@ function About(){
                 <a href="https://github.com/GustavoST868"><img src="./icon/github.png" alt=""></a>
                 <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b"><img src="./icon/linkedin.png" alt="" style="margin-left: 1%;"></a>
             </div>
+        </div>
+    `;
+}
+
+function Respository(){
+    const right = document.getElementById('right');
+    right.innerHTML = `
+        <div class="container-repository" id="container-repository">
+            
         </div>
     `;
 }
@@ -98,8 +113,6 @@ function Projects(){
             deploy.target = "_blank"; 
         }
 
-        
-        
         divProjeto.appendChild(nome);
         divProjeto.appendChild(tecnologias);
         divProjeto.appendChild(descricao);
