@@ -40,23 +40,26 @@ const rep = [
         name: "HTML, CSS e JavaScript",
         description: "Armazena pequenos projetos para treinar ferramentas voltadas para desenvolvimentos Web. Nele, há arquivos de resolução de questões de programação cuja interface foi desenvolvida para navegador.",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net"
-
     },
+
     {
         name: "Python",
         description: "Repositório para guardar algoritmo que desenvolvi durante a prática de lógica de programação. Alguns dos algoritmos exemplificam a utilização de banco de dados e  criação de interfaces simples.",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net"
     },
+
     {
         name: "C",
         description: "Algoritmos desenvolvidos durante a aprendizagem da linguagem. Muitos dos algoritmos aqui depositados foram criados durante a faculdade, nas matérias de AP1 e AP2.",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net"
     },
+
     {
         name: "Java",
         description: "Soluções desenvolvidas para praticar lógica de programação. Os algoritmos envolvem programação orientada a objetos, questões de programação e desenvolvimento Web.",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net"
     },
+
     {
         name: "Faculdade",
         description: "Arquivos produzidos durante a faculdade. Contém algoritmos desenvolvidos nas matérias e outros tipos de trabalhos.",
@@ -77,8 +80,9 @@ function About(){
                     Ela conterá uma descrição detalhada das ferramentas e da lógica que utilizei para criar os algoritmos.
                 </p>
             <div class="icon-link">
-                <a href="https://github.com/GustavoST868"><img src="./icon/github.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b"><img src="./icon/linkedin.png" alt="" style="margin-left: 1%;"></a>
+                <a style="margin-right: 2%;" href="https://github.com/GustavoST868"><img src="./icon/github.png" alt=""></a>
+                <a style="margin-right: 2%;" href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b"><img src="./icon/linkedin.png" alt="" style="margin-left: 1%;"></a>
+                <a href="https://mail.google.com/mail/u/0/?to=gustavosantosteixeira98@gmail.com&fs=1&tf=cm"><img src="./icon/email.png" alt="" style="margin-left: 1%;"></a>
             </div>
         </div>
     `;
@@ -99,7 +103,7 @@ function Projects(){
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<br><strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
 
         const tecnologias = document.createElement("p");
         tecnologias.classList.add("project-technologies"); 
