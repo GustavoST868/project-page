@@ -12,7 +12,6 @@ const projetos = [
         name: "API de Usuários",
         technologies: ["Java", "SpringBoot"],
         description: "Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos para armazenar e carregar os usuários e senhas. A classe User possui métodos para getters e setters simples, juntamente com métodos para criação, deleção, atualização, verificação de existência e disponibilização dos dados. Além de métodos para contagem dos usuários armazenados.",
-        repository: "https://github.com/GustavoST868/java/tree/main/api-usuarios",
         deploy: ""
     },
 
@@ -35,13 +34,35 @@ const projetos = [
    
 ];
 
+const rep = [
 
-const reposit = [
     {
-        name: "teste",
-        number_files: "teste",
-        description: "teste"
+        name: "HTML, CSS e JavaScript",
+        description: "Armazena pequenos projetos para treinar ferramentas voltadas para desenvolvimentos Web. Nele, há arquivos de resolução de questões de programação cuja interface foi desenvolvida para navegador.",
+        repository: "https://github.com/GustavoST868/formulario-web-asp-net"
+
     },
+    {
+        name: "Python",
+        description: "Repositório para guardar algoritmo que desenvolvi durante a prática de lógica de programação. Alguns dos algoritmos exemplificam a utilização de banco de dados e  criação de interfaces simples.",
+        repository: "https://github.com/GustavoST868/formulario-web-asp-net"
+    },
+    {
+        name: "C",
+        description: "Algoritmos desenvolvidos durante a aprendizagem da linguagem. Muitos dos algoritmos aqui depositados foram criados durante a faculdade, nas matérias de AP1 e AP2.",
+        repository: "https://github.com/GustavoST868/formulario-web-asp-net"
+    },
+    {
+        name: "Java",
+        description: "Soluções desenvolvidas para praticar lógica de programação. Os algoritmos envolvem programação orientada a objetos, questões de programação e desenvolvimento Web.",
+        repository: "https://github.com/GustavoST868/formulario-web-asp-net"
+    },
+    {
+        name: "Faculdade",
+        description: "Arquivos produzidos durante a faculdade. Contém algoritmos desenvolvidos nas matérias e outros tipos de trabalhos.",
+        repository: "https://github.com/GustavoST868/formulario-web-asp-net"
+    },
+
 ];
 
 
@@ -63,22 +84,11 @@ function About(){
     `;
 }
 
-function Respository(){
-    const right = document.getElementById('right');
-    right.innerHTML = `
-        <div class="container-repository" id="container-repository">
-            
-        </div>
-    `;
-}
-
 
 function Projects(){
     const right = document.getElementById('right');
     right.innerHTML = `
-        <div class="container-project" id="container-project">
-            
-        </div>
+        <div class="container-project" id="container-project"></div>
     `;
 
     const container = document.getElementById("container-project"); 
@@ -118,14 +128,52 @@ function Projects(){
         divProjeto.appendChild(descricao);
         divProjeto.appendChild(repositorio);
         if (deploy) divProjeto.appendChild(deploy);
-   
-        
         container.appendChild(divProjeto);
     });
 }
 
 
-About();
 
+function Repository(){
+    const right = document.getElementById('right');
+    right.innerHTML = `
+        <div class="container-repository" id="container-repository">
+        </div>
+    `;
+
+    const containerRepository = document.getElementById('container-repository');
+
+    rep.forEach(element => {
+        const repositoryContent = document.createElement('div');
+        repositoryContent.classList.add('repository-content');
+
+        const nameRepository = document.createElement('p');
+        nameRepository.classList.add('name-repository');
+        nameRepository.innerHTML = `<strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>${element.name}</strong>`;
+
+        const descriptionRepository = document.createElement('p');
+        descriptionRepository.classList.add('description-repository');
+        descriptionRepository.innerHTML = `<strong>Descrição:</strong><br>${element.description}`;
+
+
+        const linkRepository = document.createElement('a');
+        linkRepository.classList.add('link-repository');
+        linkRepository.href = element.repository;
+        linkRepository.innerHTML = `<p style="margin-top:'10px;color:rgb(7, 89, 241);">GitHub</p>`;
+        linkRepository.target = "_blank";
+
+
+
+        repositoryContent.appendChild(nameRepository);
+        repositoryContent.appendChild(descriptionRepository);
+        repositoryContent.appendChild(linkRepository);
+        containerRepository.appendChild(repositoryContent);
+    });
+
+    
+}
+
+About();
 document.getElementById('button-about').addEventListener('click',About);
 document.getElementById('button-projects').addEventListener('click',Projects);
+document.getElementById('button-repository').addEventListener('click',Repository);

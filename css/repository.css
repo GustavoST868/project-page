@@ -1,12 +1,12 @@
-.container-project{
+.container-repository{
+    overflow-y: scroll;
+    scrollbar-width: none;
     width: 100%;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    overflow-y: scroll;
-    scrollbar-width: none;
 }
 
-.project-content{
+.repository-content{
     border-radius: 5px;
     padding: 40px;
     border: 1px solid rgba(0, 0, 255, 0.164);
@@ -16,29 +16,39 @@
     margin-right: 4%;
     margin-top: 3%;
     margin-bottom: 3%;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: rgb(255, 255, 255);
 }
 
-.project-content p{
+.repository-content p{
     color: rgb(1, 24, 66);
 }
 
-.project-name{
+.name-repository{
+    color: rgb(6, 72, 196);
     font-size: 120%;
 }
 
-.project-description{
+.description-repository{
     font-size: 120%;
 }
 
-.project-repository{
+.link-repository {
     font-size: 120%;
     text-decoration: none;
+    color: rgb(0, 89, 255);
+}
+
+.link-repository p{
+    margin-top: 10px;
+    color: rgb(0, 89, 255);
 }
 
 
 @media (max-width:600px) {
-    
-    .container-project{
+    .container-repository{
         width: 100%;
         height: 100%;
         background-color: rgb(255, 255, 255);
@@ -46,7 +56,7 @@
         scrollbar-width: none;
     }
     
-    .project-content{
+    .repository-content{
         padding: 20px;
         text-align: justify;
         margin-left: 4%;
@@ -57,25 +67,14 @@
     
     .project-content p{
         color: rgb(1, 24, 66);
-    }
-
-    .project-name{
         font-size: 110%;
     }
 
-    .project-technologies{
+    .description-repository{
         font-size: 110%;
     }
 
-    .project-description{
+    .name-repository{
         font-size: 110%;
-    }
-
-    .project-repository{
-        font-size: 110%;
-    }
-
-    .project-deploy{
-        font-size: 110%;   
     }
 }
