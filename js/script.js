@@ -105,13 +105,10 @@ function Projects(){
         nome.classList.add("project-name"); 
         nome.innerHTML = "<strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
 
-        const tecnologias = document.createElement("p");
-        tecnologias.classList.add("project-technologies"); 
-        tecnologias.innerHTML = "<strong>Tecnologias:</strong>" +"<br>"+projeto.technologies.join(", ");
 
         const descricao = document.createElement("p");
         descricao.classList.add("project-description"); 
-        descricao.innerHTML = "<strong>Descrição:</strong>" +"<br>"+ projeto.description;
+        descricao.innerHTML = projeto.description;
 
         const repositorio = document.createElement("a");
         repositorio.classList.add("project-repository"); 
@@ -128,7 +125,7 @@ function Projects(){
         }
 
         divProjeto.appendChild(nome);
-        divProjeto.appendChild(tecnologias);
+        
         divProjeto.appendChild(descricao);
         divProjeto.appendChild(repositorio);
         if (deploy) divProjeto.appendChild(deploy);
@@ -157,7 +154,7 @@ function Repository(){
 
         const descriptionRepository = document.createElement('p');
         descriptionRepository.classList.add('description-repository');
-        descriptionRepository.innerHTML = `<strong>Descrição:</strong><br>${element.description}`;
+        descriptionRepository.innerHTML = `${element.description}`;
 
 
         const linkRepository = document.createElement('a');
