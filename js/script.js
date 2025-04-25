@@ -113,7 +113,7 @@ function Projects(){
         const repositorio = document.createElement("a");
         repositorio.classList.add("project-repository"); 
         repositorio.href = projeto.repository;
-        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 89, 255);" >Repositório e Imagens</p>';
+        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 89, 255);" >Repositório</p>';
         repositorio.target = "_blank"; 
 
         const deploy = projeto.deploy ? document.createElement("a") : null;
