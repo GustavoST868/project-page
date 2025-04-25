@@ -103,7 +103,7 @@ function Projects(){
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<strong style='color: black;font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
 
 
         const descricao = document.createElement("p");
