@@ -24,8 +24,7 @@
 
 .project-content p{
     color: rgb(1, 24, 66);
-    font-size: 110%;	
-    margin-top: 0.5%;
+    font-size: 110%;
 }
 
 .project-name{
@@ -57,13 +56,12 @@
         text-align: justify;
         margin-left: 4%;
         margin-right: 4%;
-        margin-top: 13%;
+        margin-top: 4%;
         margin-bottom: 4%;
     }
     
     .project-content p{
         color: rgb(1, 24, 66);
-	 margin-top: 2%;
     }
 
     .project-name{

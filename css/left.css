@@ -8,8 +8,6 @@
     width: 20%;
     height: 100%;
     background-color: none;
-    
-    
 }
 
 .left button{
@@ -28,6 +26,8 @@
         align-items: center;
         justify-content: center;
         flex-direction:row;
+        border-top-left-radius:0px;
+        border-bottom-left-radius: 0px;
         width: 100%;
         height: 10%;
         background-color: rgb(1, 19, 54);
@@ -35,8 +35,8 @@
 
     .left button{
         margin-top: -4%;
+        font-size: 14px;
         color: whitesmoke;
-        font-size: 90%;
         border: 0px solid black;
         background-color: rgb(1, 24, 66);
     }

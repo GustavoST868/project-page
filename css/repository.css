@@ -28,7 +28,6 @@
 
 .repository-content p{
     color: rgb(1, 24, 66);
-    margin-top:0.5%;
 }
 
 .name-repository{
@@ -53,11 +52,6 @@
 
 
 @media (max-width:600px) {
-
-.name-repository{
-    font-size: 90%;
-}
-
     .container-repository{
         width: 100%;
         height: 100%;
@@ -71,26 +65,20 @@
         text-align: justify;
         margin-left: 4%;
         margin-right: 4%;
-        margin-top: 13%;
+        margin-top: 4%;
         margin-bottom: 4%;
     }
     
     .project-content p{
         color: rgb(1, 24, 66);
-        font-size: 100%;
- 	margin-top: 2%;
+        font-size: 110%;
     }
 
     .description-repository{
-        font-size: 100%;
+        font-size: 110%;
     }
 
     .name-repository{
-        font-size: 100%;
+        font-size: 110%;
     }
-
-	.repository-content p{
-		margin-top:2%;
-    		color: rgb(1, 24, 66);
-	}
 }
