@@ -103,7 +103,7 @@ function Projects(){
         
         const nome = document.createElement("p");
         nome.classList.add("project-name"); 
-        nome.innerHTML = "<strong style='color: black;font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
+        nome.innerHTML = "<strong style='color: rgb(0, 55, 158);font-size:110%;margin-top:3px'>"+projeto.name+"</strong>";
 
 
         const descricao = document.createElement("p");
@@ -113,7 +113,7 @@ function Projects(){
         const repositorio = document.createElement("a");
         repositorio.classList.add("project-repository"); 
         repositorio.href = projeto.repository;
-        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 89, 255);" >Repositório</p>';
+        repositorio.innerHTML = '<p style = "margin-top: 10px;color: rgb(0, 89, 255);" >GitHub</p>';
         repositorio.target = "_blank"; 
 
         const deploy = projeto.deploy ? document.createElement("a") : null;
