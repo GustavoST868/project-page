@@ -160,7 +160,7 @@ function Repository(){
         const linkRepository = document.createElement('a');
         linkRepository.classList.add('link-repository');
         linkRepository.href = element.repository;
-        linkRepository.innerHTML = `<p style="margin-top:'10px;color:rgb(7, 89, 241);">GitHub</p>`;
+        linkRepository.innerHTML = `<p style="margin-top:'10px;color:rgb(7, 89, 241);">Repositório</p>`;
         linkRepository.target = "_blank";
 
 
