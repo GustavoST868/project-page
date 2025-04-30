@@ -72,14 +72,14 @@
     
     .project-content p{
         color: rgb(1, 24, 66);
-        font-size: 110%;
+        font-size: 95%;
     }
 
     .description-repository{
-        font-size: 110%;
+        font-size: 95%;
     }
 
     .name-repository{
-        font-size: 110%;
+        font-size: 95%;
     }
 }
