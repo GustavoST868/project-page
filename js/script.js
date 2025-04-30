@@ -12,6 +12,7 @@ const projetos = [
         name: "API de Usuários",
         technologies: ["Java", "SpringBoot"],
         description: "Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos para armazenar e carregar os usuários e senhas. A classe User possui métodos para getters e setters simples, juntamente com métodos para criação, deleção, atualização, verificação de existência e disponibilização dos dados. Além de métodos para contagem dos usuários armazenados.",
+        repository: "https://github.com/GustavoST868/java/tree/main/api-usuarios/API",
         deploy: ""
     },
 
