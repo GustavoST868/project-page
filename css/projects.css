@@ -66,22 +66,22 @@
     }
 
     .project-name{
-        font-size: 110%;
+        font-size:95%;
     }
 
     .project-technologies{
-        font-size: 110%;
+        font-size: 95%;
     }
 
     .project-description{
-        font-size: 110%;
+        font-size: 95%;
     }
 
     .project-repository{
-        font-size: 110%;
+        font-size:95%;
     }
 
     .project-deploy{
-        font-size: 110%;   
+        font-size: 95%;   
     }
 }
