@@ -49,7 +49,7 @@ const rep = [
     },
 
     {
-        name: "C",
+        name: "Linguagem C",
         description: "Algoritmos desenvolvidos durante a aprendizagem da linguagem. Muitos dos algoritmos aqui depositados foram criados durante a faculdade, nas matérias de AP1 e AP2.",
         repository: "https://github.com/GustavoST868/formulario-web-asp-net"
     },
