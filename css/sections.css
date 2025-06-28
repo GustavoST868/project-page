@@ -1,0 +1,64 @@
+.section {
+    margin-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-header {
+    background:#3498db;
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.section-header:hover {
+    background: #1c83c7;
+}
+
+.section-header i {
+    transition: transform 0.3s ease;
+}
+
+.section.active .section-header i {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.section.active .section-content {
+    max-height: 10000px;
+}
+
+.section:nth-child(2) .section-header {
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.section:nth-child(3) .section-header {
+    background: linear-gradient(90deg, #27ae60, #219653);
+}
+
+.section:nth-child(4) .section-header {
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+}
+
+.section:nth-child(5) .section-header {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+ }

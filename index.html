@@ -1,29 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./icon/tools-and-utensils.png">
+    <title>Repositórios e Projetos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Portfolio</title>
 </head>
-
 <body>
     <div class="container">
-        <div class="left">
-                <button id="button-about">Sobre</button>
-                <button id="button-projects">Projetos</button>
-                <button id="button-repository">Repositórios</button>
-        </div>
-        <div class="right" id="right"></div>
+        <header>
+            <h1>Projetos e Repositórios</h1>
+            <p>Olá, meu nome é <strong>Gustavo</strong>. Sou estudante de Ciência da Computação na Universidade Federal de Jataí. Desenvolvi está página para expor os projetos que construí ao longo da graduação. Será exibido uma breve descrição dos projetos e repositórios que desenvolvi, e os links para esses materiais. A seguir estão os meios para contato.</p>
+        </header>
+        
+        <div class="academic-links">
+            <!-- Seção de Programação -->
+            <div class="section active">
+                <div class="section-header">
+                    <span>Desenvolvimento</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content">
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Sistema de Listas de Tarefas</h3>
+                            <p>Criar um algoritmo que tem as funcionalidades de criar, deletar, pesquisar, editar tarefas e mostrar tarefas no prompt. Outros recursos implementados foram a listagem de usuário criados, retornar a lista de prioridade de tarefas, conteúdos, usuários, criptografia e descriptografia por algoritmo simples, e uma classe para verificar o tipo dos dados que chegavam, com intuito de alterar o modo como o algoritmo lida com a entrada dado o tipo da informação.</p>
+                            <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                     <div class="link-item">
+                        <div class="link-info">
+                            <h3>API de Usuários</h3>
+                            <p>Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos para armazenar e carregar os usuários e senhas. A classe User possui métodos para getters e setters simples, juntamente com métodos para criação, deleção, atualização, verificação de existência e disponibilização dos dados. Além disso, possui métodos para contagem dos usuários armazenados.</p>
+                            <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+                    
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Formulário de Registro Web</h3>
+                            <p>Projeto para receber dados de um usuário e salvá-lo em uma espécie de banco de dados. Utilizei Flask Python para subir a aplicação para o local host e armazenei os dados em um banco SQLite. Como os dados remetiam a um período de validade, com seu vencimento, os dados referentes ao registro eram apagados automaticamente. Implementei uma página para mostrar os dados em forma de tabela e rotas para gerenciar as informações.</p>
+                            <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+                    
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Formulário de Registro de Dados</h3>
+                            <p>Criei um formulário simples que consome uma API, ambos ASP .NET. A API gerencia a troca de informações e operações entre o banco de dados PostgreSQL e a aplicação Web. Implementei métodos e rotas relacionados às operações básicas (CRUD).</p>
+                            <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>HTML, CSS e JavaScript</h3>
+                            <p>Armazena pequenos projetos para treinar ferramentas voltadas para desenvolvimentos Web. Nele, há arquivos de resolução de questões de programação cuja interface foi desenvolvida para navegador.</p>
+                            <a href="https://github.com/GustavoST868/html-css-javascript" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Python</h3>
+                            <p>Repositório para guardar algoritmo que desenvolvi durante a prática de lógica de programação. Alguns dos algoritmos exemplificam a utilização de banco de dados e criação de interfaces simples.</p>
+                            <a href="https://github.com/GustavoST868/python" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                     <div class="link-item">
+                        <div class="link-info">
+                            <h3>Java</h3>
+                            <p>Soluções desenvolvidas para praticar lógica de programação. Os algoritmos envolvem programação orientada a objetos, questões de programação e desenvolvimento Web.</p>
+                            <a href="https://github.com/GustavoST868/java" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Linguagem C</h3>
+                            <p>Algoritmos desenvolvidos durante a aprendizagem da linguagem. Muitos dos algoritmos aqui depositados foram criados durante a faculdade, nas matérias de AP1 e AP2.</p>
+                            <a href="https://github.com/GustavoST868/linguagem-c" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            
+            <!-- Seção de Pesquisa e Artigos -->
+            <div class="section">
+                <div class="section-header">
+                    <span>Faculdade</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content">
+
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Algoritmos e Programação</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/algoritmo-e-programacao" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Arquitetura de Computadores</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/arquitetura-de-computadores" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+
+                     <div class="link-item">
+                        <div class="link-info">
+                            <h3>Banco de Dados</h3>
+                            <p>Modelagem e linguagem SQL</p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/banco-de-dados" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Computador e Sociedade</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/computador-e-sociedade" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Empreendedorismo</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/empreendedorismo" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Engenharia de Software</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/engenharia-de-software" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Estágio Curricular</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/estagio-curricular-obrigatorio" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Estrutura de Dados</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/estrutura-de-dados" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Interface Humano Computador</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/interface-humano-computador" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+
+                    <div class="link-item">
+                        <div class="link-info">
+                            <h3>Lógica para Ciência da Computação</h3>
+                            <p></p>
+                            <a href="https://github.com/GustavoST868/faculdade-UFJ/tree/main/logica-para-ciencia-da-computacao" class="link-url">Repositório</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </div>
     <script src="./js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
