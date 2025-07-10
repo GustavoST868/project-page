@@ -13,20 +13,20 @@
 }
 
 .section-header {
-    background:#3498db;
+    background:rgb(0, 33, 95);
     color: white;
     padding: 20px 30px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 110%;
     font-weight: 600;
     transition: background 0.3s ease;
 }
 
 .section-header:hover {
-    background: #1c83c7;
+    background: rgb(0, 33, 95);
 }
 
 .section-header i {
@@ -48,7 +48,7 @@
 }
 
 .section:nth-child(2) .section-header {
-    background: linear-gradient(90deg, #e74c3c, #c0392b);
+    background: linear-gradient(90deg, rgb(0, 33, 95), rgb(0, 33, 95));
 }
 
 .section:nth-child(3) .section-header {

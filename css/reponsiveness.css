@@ -4,12 +4,16 @@
         
     }
 
+    .icons-links a{
+        margin-top: 7%;
+        margin-left: 2%;
+    }
     header p{
-        font-size: 90%;
+        font-size: 100%;
     }
             
     header h1 {
-        font-size: 130%;
+        font-size: 100%;
     }
             
     .academic-links {
@@ -18,7 +22,7 @@
             
     .section-header {
         padding: 15px 20px;
-        font-size: 1rem;
+        font-size: 100%;
     }
             
     .link-item {
