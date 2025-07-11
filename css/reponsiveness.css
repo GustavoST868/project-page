@@ -1,38 +1,62 @@
 @media (max-width: 768px) {
     header {
-        padding: 20px;
-        
+        padding: 30px 25px;
     }
-
-    .icons-links a{
-        margin-top: 7%;
-        margin-left: 2%;
+    
+    .header-content {
+        text-align: center;
     }
-    header p{
-        font-size: 100%;
-    }
-            
+    
     header h1 {
-        font-size: 100%;
+        font-size: 2rem;
     }
-            
+    
+    header h2 {
+        font-size: 1.1rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
     .academic-links {
-        padding: 20px 15px;
+        padding: 20px 25px 30px;
     }
-            
+    
     .section-header {
-        padding: 15px 20px;
-        font-size: 100%;
+        padding: 18px 20px;
+        font-size: 1rem;
     }
-            
+    
     .link-item {
-        padding: 15px 20px;
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 20px;
     }
-            
-    .link-icon {
-        margin-right: 0;
-        margin-bottom: 15px;
+    
+    .link-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        border-radius: 12px;
+    }
+    
+    header {
+        padding: 25px 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .academic-links {
+        padding: 15px 20px 25px;
+    }
+    
+    .link-item {
+        padding: 18px 15px;
     }
 }
