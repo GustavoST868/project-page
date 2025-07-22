@@ -4,7 +4,7 @@
 
 .link-item {
     padding: 25px 30px;
-    border-bottom: 1px solid #f0f4f8;
+    border-bottom: 1px solid #dce3e9;
     display: flex;
     align-items: flex-start;
     transition: background 0.3s ease;
@@ -16,7 +16,7 @@
 }
 
 .link-item:hover {
-    background: #f8fafc;
+    background: #f2f4f7;
 }
 
 .link-item::before {
@@ -26,7 +26,7 @@
     top: 0;
     height: 100%;
     width: 4px;
-    background: #0d47a1;
+    background: #1a252f;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -42,7 +42,7 @@
 .link-info h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #1a237e;
+    color: #2c3e50;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -50,13 +50,13 @@
 
 .link-info h3::before {
     content: "•";
-    color: #1976d2;
+    color: #34495e;
     margin-right: 10px;
     font-size: 1.5rem;
 }
 
 .link-info p {
-    color: #546e7a;
+    color: #5d6d7e;
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 12px;
@@ -66,7 +66,7 @@
     display: inline-flex;
     align-items: center;
     margin-top: 8px;
-    color: #1976d2;
+    color: #34495e;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -74,7 +74,7 @@
 }
 
 .link-url:hover {
-    color: #0d47a1;
+    color: #1a252f;
 }
 
 .link-url i {
