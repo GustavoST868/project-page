@@ -3,6 +3,12 @@
         padding: 30px 25px;
     }
     
+    .container {
+        width: 100%;
+        margin: 10px;
+        border-radius: 12px;
+    }
+    
     .header-content {
         text-align: center;
     }
@@ -40,6 +46,7 @@
 
 @media (max-width: 480px) {
     .container {
+        width: 100%;
         margin: 10px;
         border-radius: 12px;
     }
