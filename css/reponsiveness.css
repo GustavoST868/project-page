@@ -18,7 +18,7 @@
     }
     
     header h1 {
-        font-size: 2rem;
+        font-size: 1.1rem;
     }
     
     header h2 {
@@ -44,14 +44,14 @@
     }
     
     .link-info h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 100%;
-        margin: 10px;
+        width: 110%;
+        margin: 1px;
         border-radius: 12px;
     }
     
@@ -60,7 +60,13 @@
     }
     
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        text-align: left;
+        max-width: 97%;
     }
     
     .academic-links {
@@ -70,4 +76,14 @@
     .link-item {
         padding: 18px 15px;
     }
+
+    .icons-links a{
+        width: 30px;
+        height: 30px;
+    }
+
+    .link-info h3{
+        font-size: 0.9rem;
+    }
+    
 }
