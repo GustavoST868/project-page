@@ -13,7 +13,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #ecf0f1 0%, #dce3e9 100%);
+    background: black;
     color: #2c3e50;
     min-height: 100vh;
     padding: 20px;
