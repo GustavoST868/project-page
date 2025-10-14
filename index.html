@@ -6,6 +6,15 @@
   <title>Repositórios e Projetos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+   \\ajusta a margem a esquerda dos titulos dos projetos para alinhar aos demais textos
+    @media (max-width: 768px) {
+      .project-title {
+        margin-left: -3% !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800 min-h-screen flex justify-center items-center p-4">
@@ -20,6 +29,8 @@
           Ao longo da graduação, tive a oportunidade de explorar diferentes linguagens de programação, como Java, C, C# e JavaScript. Tenho interesse especial por desenvolvimento de software e programação competitiva, áreas que me desafiam e contribuem para o meu aprendizado contínuo.
           Sou uma pessoa colaborativa, tranquila e gosto de trabalhar em equipe, além de valorizar a troca de experiências e o contato com novas pessoas.
         </p>
+
+
         <!-- Ícones -->
         <div class="flex gap-4 mt-4">
           <a href="https://github.com/GustavoST868" title="GitHub" class="w-11 h-11 flex items-center justify-center rounded-full bg-gray-800 border border-white/20 text-white hover:bg-white/20 hover:-translate-y-1 shadow-md transition">
@@ -28,7 +39,6 @@
           <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b/" title="LinkedIn" class="w-11 h-11 flex items-center justify-center rounded-full bg-gray-800 border border-white/20 text-white hover:bg-white/20 hover:-translate-y-1 shadow-md transition">
             <i class="fab fa-linkedin-in text-xl"></i>
           </a>
-          <!-- link para compor email (mantive o formato de compose do Gmail que você usou no segundo arquivo) -->
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gustavosantosteixeira98@gmail.com" title="Email" class="w-11 h-11 flex items-center justify-center rounded-full bg-gray-800 border border-white/20 text-white hover:bg-white/20 hover:-translate-y-1 shadow-md transition">
             <i class="fas fa-envelope text-xl"></i>
           </a>
@@ -36,6 +46,8 @@
             <i class="fas fa-file-alt text-xl"></i>
           </a>
         </div>
+
+
       </div>
     </header>
 
@@ -50,9 +62,11 @@
         </div>
         <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out section-content">
 
+
+
            <!-- Item -->
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50 relative group">
-            <h3 class="ml-[-1%] text-lg font-semibold text-gray-800 flex items-center before:content-[''] before:text-gray-700 before:mr-2">
+            <h3 class="ml-[-1%] project-title text-lg font-semibold text-gray-800 flex items-center before:content-[''] before:text-gray-700 before:mr-2">
               Fila Virtual - Transporte Universitário
             </h3>
             <p class="text-gray-600 text-sm mt-2">
@@ -63,8 +77,10 @@
             </a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold text-gray-800 flex items-center before:content-[''] before:text-gray-700 before:mr-2">
+            <h3 class="ml-[-1%] project-title text-lg font-semibold text-gray-800 flex items-center before:content-[''] before:text-gray-700 before:mr-2">
               Planilha de Controle de Vendas e Gastos
             </h3>
             <p class="text-gray-600 text-sm mt-2">
@@ -75,77 +91,93 @@
             </a>
           </div>
 
-          <div class="p-6 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold text-gray-800 flex items-center before:content-[''] before:text-gray-700 before:mr-2">
-              Formulário de Registro de Dados
-            </h3>
-            <p class="text-gray-600 text-sm mt-2">
-              Criei um formulário simples que consome uma API, ambos ASP .NET. A API gerencia a troca de informações e operações entre o banco de dados PostgreSQL e a aplicação Web. Implementei métodos e rotas relacionados às operações básicas (CRUD).
-            </p>
-            <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">
-              Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i>
-            </a>
-          </div>
+
 
 
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Sistema de Listas de Tarefas</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Formulário de Registro de Dados</h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Criei um formulário simples que consome uma API, ambos ASP .NET. A API gerencia a troca de informações e operações entre o banco de dados PostgreSQL e a aplicação Web. Implementei métodos e rotas relacionados às operações básicas (CRUD).
+            </p>
+            <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+          </div>
+
+
+
+          <div class="p-6 border-b border-gray-200 hover:bg-gray-50">s
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Sistema de Listas de Tarefas</h3>
             <p class="text-gray-600 text-sm mt-2">
               Criar um algoritmo que tem as funcionalidades de criar, deletar, pesquisar, editar tarefas e mostrar tarefas no prompt. Outros recursos implementados foram a listagem de usuário criados, retornar a lista de prioridade de tarefas, conteúdos, usuários, criptografia e descriptografia por algoritmo simples, e uma classe para verificar o tipo dos dados que chegavam, com intuito de alterar o modo como o algoritmo lida com a entrada dado o tipo da informação.
             </p>
             <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">API de Usuários</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">API de Usuários</h3>
             <p class="text-gray-600 text-sm mt-2">
               Algoritmo que contém as classes Store, User e UserController. A classe Store implementa métodos para armazenar e carregar os usuários e senhas. A classe User possui métodos para getters e setters simples, juntamente com métodos para criação, deleção, atualização, verificação de existência e disponibilização dos dados. Além disso, possui métodos para contagem dos usuários armazenados.
             </p>
             <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class=" ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Formulário de Registro Web</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Formulário de Registro Web</h3>
             <p class="text-gray-600 text-sm mt-2">
               Projeto para receber dados de um usuário e salvá-lo em uma espécie de banco de dados. Utilizei Flask Python para subir a aplicação para o local host e armazenei os dados em um banco SQLite. Como os dados remetiam a um período de validade, com seu vencimento, os dados referentes ao registro eram apagados automaticamente. Implementei uma página para mostrar os dados em forma de tabela e rotas para gerenciar as informações.
             </p>
             <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class=" ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">HTML, CSS e JavaScript</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">HTML, CSS e JavaScript</h3>
             <p class="text-gray-600 text-sm mt-2">
               Armazena pequenos projetos para treinar ferramentas voltadas para desenvolvimentos Web. Nele, há arquivos de resolução de questões de programação cuja interface foi desenvolvida para navegador.
             </p>
             <a href="https://github.com/GustavoST868/html-css-javascript" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class=" ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Python</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Python</h3>
             <p class="text-gray-600 text-sm mt-2">
               Repositório para guardar algoritmo que desenvolvi durante a prática de lógica de programação. Alguns dos algoritmos exemplificam a utilização de banco de dados e criação de interfaces simples.
             </p>
             <a href="https://github.com/GustavoST868/python" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Java</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Java</h3>
             <p class="text-gray-600 text-sm mt-2">
               Soluções desenvolvidas para praticar lógica de programação. Os algoritmos envolvem programação orientada a objetos, questões de programação e desenvolvimento Web.
             </p>
             <a href="https://github.com/GustavoST868/java" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
           <div class="p-6 hover:bg-gray-50">
-            <h3 class="ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Linguagem C</h3>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Linguagem C</h3>
             <p class="text-gray-600 text-sm mt-2">
               Algoritmos desenvolvidos durante a aprendizagem da linguagem. Muitos dos algoritmos aqui depositados foram criados durante a faculdade, nas matérias de AP1 e AP2.
             </p>
             <a href="https://github.com/GustavoST868/linguagem-c" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
 
+
+
         </div>
       </div>
+
+
 
       <!-- Pesquisa e Artigos -->
       <div class="rounded-xl border border-gray-200 shadow-sm overflow-hidden section">
@@ -153,6 +185,8 @@
           <span>Pesquisas e Artigos</span>
           <i class="fas fa-chevron-down transition-transform"></i>
         </div>
+
+
         <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out section-content">
           <div class="p-6 hover:bg-gray-50">
             <h3 class="text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">Em Breve</h3>
@@ -160,10 +194,13 @@
             <a href="#" class="inline-flex items-center mt-2 text-gray-700 font-medium hover:text-gray-900 transition">Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
           </div>
         </div>
+
+
       </div>
 
 
-       <!-- Faculdade -->
+
+      <!-- Faculdade -->
       <div class="rounded-xl border border-gray-200 shadow-sm overflow-hidden section">
         <div class="flex justify-between items-center bg-gray-800 text-white px-6 py-4 cursor-pointer font-semibold text-sm section-header">
           <span>Faculdade</span>
@@ -172,41 +209,39 @@
         <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out section-content">
 
           <div class="p-6 border-b border-gray-200 hover:bg-gray-50">
-  <h3 class="ml-[-1%] text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">
-    Bacharelado em Ciência da Computação - Universidade Federal de Jataí
-  </h3>
-  <p class="text-gray-600 text-sm mt-2">
-    Este repositório tem o intuito de conter os materiais desenvolvidos durante o período da graduação. 
-    Desse modo, possui conteúdos referentes às disciplinas listadas abaixo:
-  </p>
+            <h3 class="ml-[-1%] project-title text-lg font-semibold flex items-center text-gray-800 before:content-[''] before:text-gray-700 before:mr-2">
+              Bacharelado em Ciência da Computação - Universidade Federal de Jataí
+            </h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Este repositório tem o intuito de conter os materiais desenvolvidos durante o período da graduação. 
+              Desse modo, possui conteúdos referentes às disciplinas listadas abaixo:
+            </p>
 
-  <ul class="list-disc list-inside mt-3 space-y-1 text-gray-700 text-sm">
-    <li>Algorítimos e Programação</li>
-    <li>Arquitetura de Computadores</li>
-    <li>Banco de Dados</li>
-    <li>Computador e Sociedade</li>
-    <li>Empreendedorismo</li>
-    <li>Engenharia de Software</li>
-    <li>Estágio Curricular Obrigatório</li>
-    <li>Estruturas de Dados</li>
-    <li>Interface Humano Computador</li>
-    <li>Lógica para Ciência da Computação</li>
-    <li>Segurança e Auditoria de Sistemas</li>
-  </ul>
+            <ul class="list-disc list-inside mt-3 space-y-1 text-gray-700 text-sm">
+              <li>Algorítimos e Programação</li>
+              <li>Arquitetura de Computadores</li>
+              <li>Banco de Dados</li>
+              <li>Computador e Sociedade</li>
+              <li>Empreendedorismo</li>
+              <li>Engenharia de Software</li>
+              <li>Estágio Curricular Obrigatório</li>
+              <li>Estruturas de Dados</li>
+              <li>Interface Humano Computador</li>
+              <li>Lógica para Ciência da Computação</li>
+              <li>Segurança e Auditoria de Sistemas</li>
+            </ul>
 
-  <a href="https://github.com/GustavoST868/faculdade-UFJ" 
-     class="inline-flex items-center mt-3 text-gray-700 font-medium hover:text-gray-900 transition">
-    Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i>
-  </a>
-</div>
-
+            <a href="https://github.com/GustavoST868/faculdade-UFJ" 
+               class="inline-flex items-center mt-3 text-gray-700 font-medium hover:text-gray-900 transition">
+              Repositório <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
 
         </div>
       </div>
 
     </div>
   </div>
-
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
