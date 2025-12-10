@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></></title>
+  <title id="page-title">Portfólio - Gustavo Santos Teixeira</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
@@ -46,6 +46,18 @@
       border-bottom: 1px solid #e5e7eb;
     }
     
+    /* Botão de idioma */
+    .language-btn {
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      font-weight: 500;
+    }
+    
+    .language-btn:hover {
+      transform: scale(1.05);
+      background-color: #e5e7eb;
+    }
+    
     /* Ajuste responsivo */
     @media (max-width: 768px) {
       .project-title {
@@ -55,7 +67,7 @@
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 min-h-screen flex justify-center items-center p-4 md:p-6">
+<body class="bg-gray-200 text-gray-900 min-h-screen flex justify-center items-center p-4 md:p-6">
   <div class="w-full max-w-3xl main-container rounded-lg border border-gray-200 shadow-sm overflow-hidden">
     
     <!-- Header limpo -->
@@ -63,36 +75,44 @@
       <div class="max-w-2xl">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <div>
-            <h1 class="text-2xl md:text-3xl font-light tracking-tight mb-2">Gustavo Santos Teixeira</h1>
+            <h1 class="text-2xl md:text-3xl font-light tracking-tight mb-2" id="name">Gustavo Santos Teixeira</h1>
             <div class="flex items-center gap-3">
-              <span class="badge">Ciência da Computação</span>
+              <span class="badge" id="degree">Ciência da Computação</span>
               <span class="text-gray-400">•</span>
               <span class="text-sm text-gray-500">UFJ</span>
             </div>
           </div>
           
-          <!-- Ícones sociais simples -->
-          <div class="flex gap-4">
+          <!-- Botão de idioma e ícones sociais -->
+          <div class="flex gap-4 items-center">
+            <!-- Botão de troca de idioma com texto PT/EN -->
+            <button id="language-toggle" class="language-btn flex items-center justify-center rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300">
+              <span id="language-text">PT/EN</span>
+            </button>
+            
+            <!-- Ícones sociais simples -->
             <a href="https://github.com/GustavoST868" title="GitHub" 
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700">
+               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
               <i class="fab fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b/" title="LinkedIn"
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700">
+               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gustavosantosteixeira98@gmail.com" title="Email"
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700">
+               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
         
         <div>
-          <p class="text-gray-600 leading-relaxed">
-            Olá, meu nome é <strong>Gustavo</strong>. Sou estudante de Ciência da Computação na Universidade Federal de Jataí (UFJ) desde 2022.
-          Ao longo da graduação, tive a oportunidade de explorar diferentes linguagens de programação, como Java, C, C# e JavaScript. Tenho interesse especial por desenvolvimento de software e programação competitiva, áreas que me desafiam e contribuem para o meu aprendizado contínuo.
-          Sou uma pessoa colaborativa, tranquila e gosto de trabalhar em equipe, além de valorizar a troca de experiências e o contato com novas pessoas.         </p>
+          <p class="text-gray-600 leading-relaxed" id="bio">
+            Olá, meu nome é <strong>Gustavo</strong>. Sou Bacharel em Ciência da Computação pela Universidade Federal de Jataí (UFJ).
+            Ao longo da graduação, tive a oportunidade de explorar diferentes linguagens de programação, como Java, C, C# e JavaScript. 
+            Tenho interesse especial por desenvolvimento de software e programação competitiva, áreas que me desafiam e contribuem para o meu aprendizado contínuo.
+            Sou uma pessoa colaborativa, tranquila e gosto de trabalhar em equipe, além de valorizar a troca de experiências e o contato com novas pessoas.         
+          </p>
         </div>
       </div>
     </header>
@@ -103,21 +123,21 @@
       <!-- Seção de Projetos -->
       <div>
         <div class="flex items-center justify-between mb-6">
-          <h2 class="text-xl font-medium">Seções</h2>
-            <span class="text-sm text-gray-500"></span>
+          <h2 class="text-xl font-medium" id="sections-title">Seções</h2>
+          <span class="text-sm text-gray-500" id="total-projects"></span>
         </div>
         
         <!-- Programação -->
         <div class="mb-8">
           <div class="section mb-4">
-            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg" 
+            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
                  onclick="toggleSection(this)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
                   <i class="fas fa-code text-gray-600"></i>
                 </div>
-                <span class="font-medium">Programação</span>
-                <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">11 projetos</span>
+                <span class="font-medium" id="programming-title">Programação</span>
+                <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600" id="programming-count">11 projetos</span>
               </div>
               <i class="fas fa-chevron-down text-gray-400"></i>
             </div>
@@ -126,156 +146,156 @@
               <div class="mt-4 space-y-3">
                 
                 <!-- Item de projeto 1 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Fila Virtual - Transporte Universitário</h3>
+                    <h3 class="font-medium" id="project1-title">Fila Virtual - Transporte Universitário</h3>
                     <span class="text-xs text-gray-500">Node.js • React • PostgreSQL</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project1-desc">
                     Sistema de gerenciamento de filas para transporte universitário com API REST e interface moderna.
                   </p>
-                  <a href="https://github.com/GustavoST868/filacaj-ufj" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/filacaj-ufj" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project1-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 2 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Compilador</h3>
+                    <h3 class="font-medium" id="project2-title">Compilador</h3>
                     <span class="text-xs text-gray-500">Análise Léxica • Sintática • Semântica</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project2-desc">
                     Compilador completo desenvolvido para a disciplina de Compiladores na UFJ.
                   </p>
-                  <a href="https://github.com/GustavoST868/compilador" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/compilador" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project2-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 3 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Planilha de Controle de Vendas e Gastos</h3>
+                    <h3 class="font-medium" id="project3-title">Planilha de Controle de Vendas e Gastos</h3>
                     <span class="text-xs text-gray-500">Dashboards • Análise • Controle</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project3-desc">
                     Sistema completo para controle de vendas, gastos e análise de desempenho empresarial.
                   </p>
-                  <a href="https://github.com/GustavoST868/Planilha-de-Controle-de-Gastos" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/Planilha-de-Controle-de-Gastos" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project3-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 4 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Formulário de Registro de Dados</h3>
+                    <h3 class="font-medium" id="project4-title">Formulário de Registro de Dados</h3>
                     <span class="text-xs text-gray-500">ASP.NET • API • PostgreSQL</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project4-desc">
                     Sistema de formulários web com operações CRUD completas e integração com banco de dados.
                   </p>
-                  <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project4-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 5 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Sistema de Listas de Tarefas</h3>
+                    <h3 class="font-medium" id="project5-title">Sistema de Listas de Tarefas</h3>
                     <span class="text-xs text-gray-500">Java • CRUD • Prioridades</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project5-desc">
                     Algoritmo com funcionalidades de criar, deletar, pesquisar e editar tarefas.
                   </p>
-                  <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project5-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 6 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">API de Usuários</h3>
+                    <h3 class="font-medium" id="project6-title">API de Usuários</h3>
                     <span class="text-xs text-gray-500">Java • Store • UserController</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project6-desc">
                     Algoritmo com classes para armazenar e carregar usuários e senhas.
                   </p>
-                  <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project6-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 7 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Formulário de Registro Web</h3>
+                    <h3 class="font-medium" id="project7-title">Formulário de Registro Web</h3>
                     <span class="text-xs text-gray-500">Python • Flask • SQLite</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project7-desc">
                     Formulário para registro de dados com remoção automática após período de validade.
                   </p>
-                  <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project7-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 8 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">HTML, CSS e JavaScript</h3>
+                    <h3 class="font-medium" id="project8-title">HTML, CSS e JavaScript</h3>
                     <span class="text-xs text-gray-500">Web • Frontend • Exercícios</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project8-desc">
                     Pequenos projetos para treinar ferramentas de desenvolvimento Web.
                   </p>
-                  <a href="https://github.com/GustavoST868/html-css-javascript" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/html-css-javascript" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project8-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 9 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Python</h3>
+                    <h3 class="font-medium" id="project9-title">Python</h3>
                     <span class="text-xs text-gray-500">Algoritmos • Lógica • Banco de Dados</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project9-desc">
                     Algoritmos desenvolvidos durante a prática de lógica de programação.
                   </p>
-                  <a href="https://github.com/GustavoST868/python" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/python" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project9-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 10 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Java</h3>
+                    <h3 class="font-medium" id="project10-title">Java</h3>
                     <span class="text-xs text-gray-500">POO • Exercícios • Web</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project10-desc">
                     Soluções desenvolvidas para praticar lógica de programação em Java.
                   </p>
-                  <a href="https://github.com/GustavoST868/java" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/java" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project10-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
                 <!-- Item de projeto 11 -->
-                <div class="p-4 simple-card rounded-lg">
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium">Linguagem C</h3>
+                    <h3 class="font-medium" id="project11-title">Linguagem C</h3>
                     <span class="text-xs text-gray-500">Algoritmos • AP1 • AP2</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3">
+                  <p class="text-sm text-gray-600 mb-3" id="project11-desc">
                     Algoritmos desenvolvidos durante o aprendizado da linguagem C.
                   </p>
-                  <a href="https://github.com/GustavoST868/linguagem-c" class="text-sm text-gray-700 flex items-center gap-1">
-                    Ver repositório <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/linguagem-c" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="project11-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
                 
@@ -287,38 +307,40 @@
         <!-- Pesquisas -->
         <div class="mb-8">
           <div class="section mb-4">
-            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg" 
+            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
                  onclick="toggleSection(this)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
                   <i class="fas fa-search text-gray-600"></i>
                 </div>
-                <span class="font-medium">Pesquisas</span>
-                <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">1 artigo</span>
+                <span class="font-medium" id="research-title">Pesquisas</span>
+                <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600" id="research-count">1 artigo</span>
               </div>
               <i class="fas fa-chevron-down text-gray-400"></i>
             </div>
             
             <div class="section-content max-h-0 overflow-hidden">
               <div class="mt-4">
-                <div class="p-4 simple-card rounded-lg">
-                  <h3 class="font-medium mb-2">Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão</h3>
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
+                  <h3 class="font-medium mb-2" id="paper-title">Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão</h3>
                   <p class="text-sm text-gray-600 mb-3">
-                  DOI: https://doi.org/10.5281/zenodo.17363220 
+                    DOI: https://doi.org/10.5281/zenodo.17363220 
                   </p>
-                  <break>
-                    <p>
-                  Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento e um elevado grau de complexidade em seus produtos. Trata-se de um setor caracterizado pelo desenvolvimento contínuo, pela necessidade constante de inovação e por investimentos expressivos. Nesse contexto, a literatura evidencia a importância do uso de ferramentas de especificação nas fases iniciais do processo de desenvolvimento. Entre essas ferramentas, as redes de Petri destacam-se como uma alternativa qualificada para a modelagem desses sistemas, reforçando uma das motivações para sua utilização.
-
-Diante disso, a presente pesquisa fundamenta-se no questionamento sobre como modelar e analisar o comportamento de agentes autônomos em videogames ainda nas etapas iniciais de desenvolvimento. O objetivo principal consiste em modelar e analisar os processos de tomada de decisão de agentes autônomos em jogos de estratégia, por meio do uso do formalismo das redes de Petri. Com o desenvolvimento desta pesquisa, foi possível constituir uma representação formal do comportamento de agentes autônomos, possibilitando a análise e a compreensão desses mecanismos nas fases iniciais do projeto.
-
-A implementação do modelo com Redes de Petri Coloridas permitiu representar a complexidade desse tipo de sistema e simular seu funcionamento por meio da ferramenta CPN Tools.
-
-Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletrônicos.
-                  </p>
-                    <break>
-                  <a href="https://doi.org/10.5281/zenodo.17363220 " class="text-sm text-gray-700 flex items-center gap-1">
-                    Ler artigo <i class="fas fa-arrow-right text-xs"></i>
+                  <div class="mb-4">
+                    <p class="text-gray-600" id="paper-abstract">
+                      Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento e um elevado grau de complexidade em seus produtos.
+                      Trata-se de um setor caracterizado pelo desenvolvimento contínuo, pela necessidade constante de inovação e por investimentos expressivos. Nesse contexto, a literatura evidencia
+                      a importância do uso de ferramentas de especificação nas fases iniciais do processo de desenvolvimento. Entre essas ferramentas, as redes de Petri destacam-se como uma alternativa
+                      qualificada para a modelagem desses sistemas, reforçando uma das motivações para sua utilização.Diante disso, a presente pesquisa fundamenta-se no questionamento sobre como modelar
+                      e analisar o comportamento de agentes autônomos em videogames ainda nas etapas iniciais de desenvolvimento. O objetivo principal consiste em modelar e analisar os processos de tomada
+                      de decisão de agentes autônomos em jogos de estratégia, por meio do uso do formalismo das redes de Petri. Com o desenvolvimento desta pesquisa, foi possível constituir uma representação
+                      formal do comportamento de agentes autônomos, possibilitando a análise e a compreensão desses mecanismos nas fases iniciais do projeto.
+                      A implementação do modelo com Redes de Petri Coloridas permitiu representar a complexidade desse tipo de sistema e simular seu funcionamento por meio da ferramenta CPN Tools.
+                      Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletrônicos.
+                    </p>
+                  </div>
+                  <a href="https://doi.org/10.5281/zenodo.17363220 " class="text-sm mt-4 text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="paper-link">Ler artigo</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
               </div>
@@ -329,13 +351,13 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
         <!-- Faculdade -->
         <div>
           <div class="section mb-4">
-            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg" 
+            <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
                  onclick="toggleSection(this)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
                   <i class="fas fa-graduation-cap text-gray-600"></i>
                 </div>
-                <span class="font-medium">Formação Acadêmica</span>
+                <span class="font-medium" id="academic-title">Formação Acadêmica</span>
                 <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">UFJ</span>
               </div>
               <i class="fas fa-chevron-down text-gray-400"></i>
@@ -343,14 +365,14 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
             
             <div class="section-content max-h-0 overflow-hidden">
               <div class="mt-4">
-                <div class="p-4 simple-card rounded-lg">
-                  <h3 class="font-medium mb-2">Bacharelado em Ciência da Computação</h3>
-                  <p class="text-sm text-gray-600 mb-4">
-                    Universidade Federal de Jataí (UFJ) • 2022 - Presente
+                <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
+                  <h3 class="font-medium mb-2" id="degree-title">Bacharelado em Ciência da Computação</h3>
+                  <p class="text-sm text-gray-600 mb-4" id="degree-info">
+                    Universidade Federal de Jataí (UFJ) • 2022 - 2025
                   </p>
                   
                   <div class="mb-4">
-                    <h4 class="text-sm font-medium mb-2">Disciplinas</h4>
+                    <h4 class="text-sm font-medium mb-2" id="courses-title">Disciplinas</h4>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                       <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Algoritmos e Programação</div>
                       <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Arquitetura de Computadores</div>
@@ -363,11 +385,13 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
                       <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Interface Humano Computador</div>
                       <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Lógica para Ciência da Computação</div>
                       <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Segurança e Auditoria de Sistemas</div>
+                      <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Compiladores</div>
+                      <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Tópicos em Computação Aplicada</div>
                     </div>
                   </div>
                   
-                  <a href="https://github.com/GustavoST868/faculdade-UFJ" class="text-sm text-gray-700 flex items-center gap-1">
-                    Materiais acadêmicos <i class="fas fa-arrow-right text-xs"></i>
+                  <a href="https://github.com/GustavoST868/faculdade-UFJ" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
+                    <span id="academic-materials">Materiais acadêmicos</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a>
                 </div>
               </div>
@@ -382,18 +406,18 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
     <footer class="px-6 md:px-8 py-6 border-t border-gray-200">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <p class="text-sm text-gray-600">Gustavo Santos Teixeira</p>
-          <p class="text-xs text-gray-500 mt-1"></p>
+          <p class="text-sm text-gray-600" id="footer-name">Gustavo Santos Teixeira</p>
+          <p class="text-xs text-gray-500 mt-1" id="footer-tagline"></p>
         </div>
         <div class="flex items-center gap-4">
           <a href="./Currículo - Gustavo Santos Teixeira.pdf" download="Curriculo-Gustavo-Teixeira.pdf" 
-             class="text-sm text-gray-600 flex items-center gap-2">
+             class="text-sm text-gray-600 flex items-center gap-2 hover:text-blue-600">
             <i class="fas fa-download text-xs"></i>
-            Currículo
+            <span id="resume-link">Currículo</span>
           </a>
           <a href="mailto:gustavosantosteixeira98@gmail.com" 
-             class="text-sm text-gray-600">
-            Contato
+             class="text-sm text-gray-600 hover:text-blue-600">
+            <span id="contact-link">Contato</span>
           </a>
         </div>
       </div>
@@ -402,6 +426,179 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
   </div>
 
   <script>
+    // Sistema de internacionalização
+    const translations = {
+      pt: {
+        // Títulos e cabeçalhos
+        'page-title': 'Portfólio - Gustavo Santos Teixeira',
+        'name': 'Gustavo Santos Teixeira',
+        'degree': 'Ciência da Computação',
+        'sections-title': 'Seções',
+        'programming-title': 'Programação',
+        'programming-count': '11 projetos',
+        'research-title': 'Pesquisas',
+        'research-count': '1 artigo',
+        'academic-title': 'Formação Acadêmica',
+        'courses-title': 'Disciplinas',
+        'degree-title': 'Bacharelado em Ciência da Computação',
+        'paper-title': 'Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão',
+        
+        // Biografia
+        'bio': 'Olá, meu nome é <strong>Gustavo</strong>. Sou Bacharel em Ciência da Computação pela Universidade Federal de Jataí (UFJ). Ao longo da graduação, tive a oportunidade de explorar diferentes linguagens de programação, como Java, C, C# e JavaScript. Tenho interesse especial por desenvolvimento de software e programação competitiva, áreas que me desafiam e contribuem para o meu aprendizado contínuo. Sou uma pessoa colaborativa, tranquila e gosto de trabalhar em equipe, além de valorizar a troca de experiências e o contato com novas pessoas.',
+        
+        // Informações acadêmicas
+        'degree-info': 'Universidade Federal de Jataí (UFJ) • 2022 - 2025',
+        
+        // Abstract do artigo
+        'paper-abstract': 'Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento e um elevado grau de complexidade em seus produtos. Trata-se de um setor caracterizado pelo desenvolvimento contínuo, pela necessidade constante de inovação e por investimentos expressivos. Nesse contexto, a literatura evidencia a importância do uso de ferramentas de especificação nas fases iniciais do processo de desenvolvimento. Entre essas ferramentas, as redes de Petri destacam-se como uma alternativa qualificada para a modelagem desses sistemas, reforçando uma das motivações para sua utilização.Diante disso, a presente pesquisa fundamenta-se no questionamento sobre como modelar e analisar o comportamento de agentes autônomos em videogames ainda nas etapas iniciais de desenvolvimento. O objetivo principal consiste em modelar e analisar os processos de tomada de decisão de agentes autônomos em jogos de estratégia, por meio do uso do formalismo das redes de Petri. Com o desenvolvimento desta pesquisa, foi possível constituir uma representação formal do comportamento de agentes autônomos, possibilitando a análise e a compreensão desses mecanismos nas fases iniciais do projeto. A implementação do modelo com Redes de Petri Coloridas permitiu representar a complexidade desse tipo de sistema e simular seu funcionamento por meio da ferramenta CPN Tools. Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletrônicos.',
+        
+        // Projetos
+        'project1-title': 'Fila Virtual - Transporte Universitário',
+        'project1-desc': 'Sistema de gerenciamento de filas para transporte universitário com API REST e interface moderna.',
+        'project2-title': 'Compilador',
+        'project2-desc': 'Compilador completo desenvolvido para a disciplina de Compiladores na UFJ.',
+        'project3-title': 'Planilha de Controle de Vendas e Gastos',
+        'project3-desc': 'Sistema completo para controle de vendas, gastos e análise de desempenho empresarial.',
+        'project4-title': 'Formulário de Registro de Dados',
+        'project4-desc': 'Sistema de formulários web com operações CRUD completas e integração com banco de dados.',
+        'project5-title': 'Sistema de Listas de Tarefas',
+        'project5-desc': 'Algoritmo com funcionalidades de criar, deletar, pesquisar e editar tarefas.',
+        'project6-title': 'API de Usuários',
+        'project6-desc': 'Algoritmo com classes para armazenar e carregar usuários e senhas.',
+        'project7-title': 'Formulário de Registro Web',
+        'project7-desc': 'Formulário para registro de dados com remoção automática após período de validade.',
+        'project8-title': 'HTML, CSS e JavaScript',
+        'project8-desc': 'Pequenos projetos para treinar ferramentas de desenvolvimento Web.',
+        'project9-title': 'Python',
+        'project9-desc': 'Algoritmos desenvolvidos durante a prática de lógica de programação.',
+        'project10-title': 'Java',
+        'project10-desc': 'Soluções desenvolvidas para praticar lógica de programação em Java.',
+        'project11-title': 'Linguagem C',
+        'project11-desc': 'Algoritmos desenvolvidos durante o aprendizado da linguagem C.',
+        
+        // Links
+        'project1-link': 'Ver repositório',
+        'project2-link': 'Ver repositório',
+        'project3-link': 'Ver repositório',
+        'project4-link': 'Ver repositório',
+        'project5-link': 'Ver repositório',
+        'project6-link': 'Ver repositório',
+        'project7-link': 'Ver repositório',
+        'project8-link': 'Ver repositório',
+        'project9-link': 'Ver repositório',
+        'project10-link': 'Ver repositório',
+        'project11-link': 'Ver repositório',
+        'paper-link': 'Ler artigo',
+        'academic-materials': 'Materiais acadêmicos',
+        'resume-link': 'Currículo',
+        'contact-link': 'Contato',
+        
+        // Footer
+        'footer-name': 'Gustavo Santos Teixeira'
+      },
+      en: {
+        // Titles and headers
+        'page-title': 'Portfolio - Gustavo Santos Teixeira',
+        'name': 'Gustavo Santos Teixeira',
+        'degree': 'Computer Science',
+        'sections-title': 'Sections',
+        'programming-title': 'Programming',
+        'programming-count': '11 projects',
+        'research-title': 'Research',
+        'research-count': '1 article',
+        'academic-title': 'Academic Education',
+        'courses-title': 'Courses',
+        'degree-title': 'Bachelor in Computer Science',
+        'paper-title': 'Formal Modeling and Analysis of Strategy Games with Decision Making',
+        
+        // Biography
+        'bio': 'Hello, my name is <strong>Gustavo</strong>. I hold a Bachelor degree in Computer Science from the Federal University of Jataí (UFJ). Throughout my undergraduate studies, I had the opportunity to explore different programming languages, such as Java, C, C#, and JavaScript. I have a special interest in software development and competitive programming, areas that challenge me and contribute to my continuous learning. I am a collaborative, calm person who enjoys working in teams and values the exchange of experiences and meeting new people.',
+        
+        // Academic information
+        'degree-info': 'Federal University of Jataí (UFJ) • 2022 - 2025',
+        
+        // Paper abstract
+        'paper-abstract': 'Considering the current scenario, it is noted that the electronic games market shows an intense growth rate and a high degree of complexity in its products. This is a sector characterized by continuous development, constant need for innovation and significant investments. In this context, the literature highlights the importance of using specification tools in the early stages of the development process. Among these tools, Petri nets stand out as a qualified alternative for modeling these systems, reinforcing one of the motivations for their use. Given this, this research is based on the question of how to model and analyze the behavior of autonomous agents in video games still in the early stages of development. The main objective is to model and analyze the decision-making processes of autonomous agents in strategy games, through the use of Petri nets formalism. With the development of this research, it was possible to establish a formal representation of the behavior of autonomous agents, enabling the analysis and understanding of these mechanisms in the early stages of the project. The implementation of the model with Colored Petri Nets allowed representing the complexity of this type of system and simulating its operation through the CPN Tools tool. Keywords: Petri Nets. Colored Petri Nets. Modeling. Electronic Games.',
+        
+        // Projects
+        'project1-title': 'Virtual Queue - University Transportation',
+        'project1-desc': 'Queue management system for university transportation with REST API and modern interface.',
+        'project2-title': 'Compiler',
+        'project2-desc': 'Complete compiler developed for the Compilers course at UFJ.',
+        'project3-title': 'Sales and Expenses Control Spreadsheet',
+        'project3-desc': 'Complete system for sales control, expenses and business performance analysis.',
+        'project4-title': 'Data Registration Form',
+        'project4-desc': 'Web form system with complete CRUD operations and database integration.',
+        'project5-title': 'Task List System',
+        'project5-desc': 'Algorithm with functionality to create, delete, search and edit tasks.',
+        'project6-title': 'Users API',
+        'project6-desc': 'Algorithm with classes to store and load users and passwords.',
+        'project7-title': 'Web Registration Form',
+        'project7-desc': 'Form for data registration with automatic removal after validity period.',
+        'project8-title': 'HTML, CSS and JavaScript',
+        'project8-desc': 'Small projects to train Web development tools.',
+        'project9-title': 'Python',
+        'project9-desc': 'Algorithms developed during programming logic practice.',
+        'project10-title': 'Java',
+        'project10-desc': 'Solutions developed to practice programming logic in Java.',
+        'project11-title': 'C Language',
+        'project11-desc': 'Algorithms developed while learning the C language.',
+        
+        // Links
+        'project1-link': 'View repository',
+        'project2-link': 'View repository',
+        'project3-link': 'View repository',
+        'project4-link': 'View repository',
+        'project5-link': 'View repository',
+        'project6-link': 'View repository',
+        'project7-link': 'View repository',
+        'project8-link': 'View repository',
+        'project9-link': 'View repository',
+        'project10-link': 'View repository',
+        'project11-link': 'View repository',
+        'paper-link': 'Read article',
+        'academic-materials': 'Academic materials',
+        'resume-link': 'Resume',
+        'contact-link': 'Contact',
+        
+        // Footer
+        'footer-name': 'Gustavo Santos Teixeira'
+      }
+    };
+
+    // Estado do idioma
+    let currentLang = 'pt';
+    
+    // Função para alternar idioma
+    function toggleLanguage() {
+      currentLang = currentLang === 'pt' ? 'en' : 'pt';
+      applyLanguage(currentLang);
+      
+      // Salvar preferência no localStorage
+      localStorage.setItem('portfolio-language', currentLang);
+    }
+    
+    // Função para aplicar o idioma
+    function applyLanguage(lang) {
+      // Atualizar atributo lang do html
+      document.documentElement.lang = lang;
+      
+      // Atualizar título da página
+      document.getElementById('page-title').textContent = translations[lang]['page-title'];
+      
+      // Atualizar todos os elementos com IDs correspondentes
+      Object.keys(translations[lang]).forEach(key => {
+        const element = document.getElementById(key);
+        if (element) {
+          if (key === 'bio') {
+            element.innerHTML = translations[lang][key];
+          } else {
+            element.textContent = translations[lang][key];
+          }
+        }
+      });
+    }
+    
     // Função para alternar seções
     function toggleSection(element) {
       const content = element.nextElementSibling;
@@ -418,6 +615,19 @@ Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletr
     
     // Inicialização
     document.addEventListener('DOMContentLoaded', () => {
+      // Configurar botão de idioma
+      const languageButton = document.getElementById('language-toggle');
+      languageButton.addEventListener('click', toggleLanguage);
+      
+      // Verificar se há preferência salva
+      const savedLang = localStorage.getItem('portfolio-language');
+      if (savedLang) {
+        currentLang = savedLang;
+      }
+      
+      // Aplicar idioma inicial
+      applyLanguage(currentLang);
+      
       // Abre a primeira seção por padrão
      // const firstSection = document.querySelector('.section');
       if (firstSection) {
