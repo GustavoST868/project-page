@@ -8,28 +8,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   
   <style>
-    /* Tipografia limpa e simples */
+  
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     
-    /* Container principal simples */
+    
     .main-container {
       background: #ffffff;
     }
     
-    /* Cartões simples */
+    
     .simple-card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
     }
     
-    /* Transição básica para expansão de seções */
+    
     .section-content {
       transition: max-height 0.3s ease;
     }
     
-    /* Estilo para badges */
+  
     .badge {
       display: inline-block;
       padding: 4px 12px;
@@ -40,13 +40,13 @@
       color: #6b7280;
     }
     
-    /* Cabeçalho limpo */
+     
     .header-plain {
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
     }
     
-    /* Botão de idioma */
+
     .language-btn {
       transition: all 0.3s ease;
       padding: 8px 16px;
@@ -58,7 +58,7 @@
       background-color: #e5e7eb;
     }
     
-    /* Ajuste responsivo */
+
     @media (max-width: 768px) {
       .project-title {
         margin-left: 0 !important;
@@ -70,7 +70,7 @@
 <body class="bg-gray-200 text-gray-900 min-h-screen flex justify-center items-center p-4 md:p-6">
   <div class="w-full max-w-3xl main-container rounded-lg border border-gray-200 shadow-sm overflow-hidden">
     
-    <!-- Header limpo -->
+
     <header class="header-plain p-8 md:p-10">
       <div class="max-w-2xl">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
@@ -83,14 +83,14 @@
             </div>
           </div>
           
-          <!-- Botão de idioma e ícones sociais -->
+          
           <div class="flex gap-4 items-center">
-            <!-- Botão de troca de idioma com texto PT/EN -->
+         
             <button id="language-toggle" class="language-btn flex items-center justify-center rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300">
               <span id="language-text">PT/EN</span>
             </button>
             
-            <!-- Ícones sociais simples -->
+
             <a href="https://github.com/GustavoST868" title="GitHub" 
                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
               <i class="fab fa-github"></i>
@@ -117,17 +117,17 @@
       </div>
     </header>
 
-    <!-- Conteúdo principal -->
+
     <main class="px-6 md:px-8 py-8">
       
-      <!-- Seção de Projetos -->
+
       <div>
         <div class="flex items-center justify-between mb-6">
           <h2 class="text-xl font-medium" id="sections-title">Seções</h2>
           <span class="text-sm text-gray-500" id="total-projects"></span>
         </div>
         
-        <!-- Programação -->
+
         <div class="mb-8">
           <div class="section mb-4">
             <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
@@ -148,24 +148,19 @@
                  <!-- Item de projeto 1 -->
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
-                    <h3 class="font-medium" id="project1-title">Projeto para Empresa de Contabilidade</h3>
+                    <h3 class="font-medium" id="projeto-automacao-planilha"></h3>
                     <span class="text-xs text-gray-500">Google Sheets• AppScript • JavaScript</span>
                   </div>
-                  <p class="text-sm text-gray-600 mb-3" id="project1-desc">
-                    O projeto integra automação, organização de dados e geração de documentos utilizando ferramentas do ecossistema Google. O Google Sheets atua como núcleo do sistema, organizado em abas para cadastro, armazenamento e controle das informações. O Apps Script concentra a lógica da aplicação, incluindo regras de negócio, validações, automações e a integração entre formulário, planilha e Google Drive. O formulário web, desenvolvido com Apps Script, realiza a entrada de dados. Após o envio, os dados são registrados na planilha, os status são atualizados e o Recibo Provisório de Serviço é preenchido automaticamente a partir de um modelo. O documento final é salvo no Google Drive e enviado por e-mail, concluindo o processo de forma integrada.
+                  <p class="text-sm text-gray-600 mb-3" id="projeto-automacao-descricao">
+                    
                   </p>
                   <a href="https://github.com/GustavoST868/contabilidade-expert" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
                     <span id="project1-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
                   </a><br>
-                  <a href="https://lnkd.in/dnM3FnwY" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                    <span id="project1-link">Ver planilha</span> <i class="fas fa-arrow-right text-xs"></i>
-                  </a><br>
-                  <a href="https://lnkd.in/dVPzH_kN" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                    <span id="project1-link">Ver formulário</span> <i class="fas fa-arrow-right text-xs"></i>
-                  </a>
+                  
                 </div>
                 
-                <!-- Item de projeto 1 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project1-title">Fila Virtual - Transporte Universitário</h3>
@@ -179,7 +174,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 2 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project2-title">Compilador</h3>
@@ -193,7 +188,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 3 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project3-title">Planilha de Controle de Vendas e Gastos</h3>
@@ -207,7 +202,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 4 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project4-title">Formulário de Registro de Dados</h3>
@@ -221,7 +216,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 5 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project5-title">Sistema de Listas de Tarefas</h3>
@@ -235,7 +230,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 6 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project6-title">API de Usuários</h3>
@@ -249,7 +244,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 7 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project7-title">Formulário de Registro Web</h3>
@@ -263,7 +258,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 8 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project8-title">HTML, CSS e JavaScript</h3>
@@ -277,7 +272,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 9 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project9-title">Python</h3>
@@ -291,7 +286,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 10 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project10-title">Java</h3>
@@ -305,7 +300,7 @@
                   </a>
                 </div>
                 
-                <!-- Item de projeto 11 -->
+
                 <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
                   <div class="flex items-start justify-between mb-2">
                     <h3 class="font-medium" id="project11-title">Linguagem C</h3>
@@ -324,7 +319,7 @@
           </div>
         </div>
         
-        <!-- Pesquisas -->
+        
         <div class="mb-8">
           <div class="section mb-4">
             <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
@@ -369,7 +364,7 @@
           </div>
         </div>
         
-        <!-- Faculdade -->
+
         <div>
           <div class="section mb-4">
             <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
@@ -423,7 +418,7 @@
       
     </main>
     
-    <!-- Footer simples -->
+
     <footer class="px-6 md:px-8 py-6 border-t border-gray-200">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
@@ -447,7 +442,7 @@
   </div>
 
   <script>
-    // Sistema de internacionalização
+
     const translations = {
       pt: {
         // Títulos e cabeçalhos
@@ -464,18 +459,20 @@
         'degree-title': 'Bacharelado em Ciência da Computação',
         'paper-title': 'Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão',
         
-        // Biografia
+
         'bio': 'Olá, meu nome é <strong>Gustavo</strong>. Sou Bacharel em Ciência da Computação pela Universidade Federal de Jataí (UFJ). Ao longo da graduação, tive a oportunidade de explorar diferentes linguagens de programação, como Java, C, C# e JavaScript. Tenho interesse especial por desenvolvimento de software e programação competitiva, áreas que me desafiam e contribuem para o meu aprendizado contínuo. Sou uma pessoa colaborativa, tranquila e gosto de trabalhar em equipe, além de valorizar a troca de experiências e o contato com novas pessoas.',
         
-        // Informações acadêmicas
+
         'degree-info': 'Universidade Federal de Jataí (UFJ) • 2022 - 2025',
         
-        // Abstract do artigo
+
         'paper-abstract': 'Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento e um elevado grau de complexidade em seus produtos. Trata-se de um setor caracterizado pelo desenvolvimento contínuo, pela necessidade constante de inovação e por investimentos expressivos. Nesse contexto, a literatura evidencia a importância do uso de ferramentas de especificação nas fases iniciais do processo de desenvolvimento. Entre essas ferramentas, as redes de Petri destacam-se como uma alternativa qualificada para a modelagem desses sistemas, reforçando uma das motivações para sua utilização.Diante disso, a presente pesquisa fundamenta-se no questionamento sobre como modelar e analisar o comportamento de agentes autônomos em videogames ainda nas etapas iniciais de desenvolvimento. O objetivo principal consiste em modelar e analisar os processos de tomada de decisão de agentes autônomos em jogos de estratégia, por meio do uso do formalismo das redes de Petri. Com o desenvolvimento desta pesquisa, foi possível constituir uma representação formal do comportamento de agentes autônomos, possibilitando a análise e a compreensão desses mecanismos nas fases iniciais do projeto. A implementação do modelo com Redes de Petri Coloridas permitiu representar a complexidade desse tipo de sistema e simular seu funcionamento por meio da ferramenta CPN Tools. Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletrônicos.',
         
-        // Projetos
+
         'project1-title': 'Fila Virtual - Transporte Universitário',
         'project1-desc': 'Sistema de gerenciamento de filas para transporte universitário com API REST e interface moderna.',
+        'projeto-automacao-planilha':'Projeto para Empresa de Contabilidade',
+        'projeto-automacao-descricao':'O projeto integra automação, organização de dados e geração de documentos utilizando ferramentas do ecossistema Google. O Google Sheets atua como núcleo do sistema, organizado em abas para cadastro, armazenamento e controle das informações. O Apps Script concentra a lógica da aplicação, incluindo regras de negócio, validações, automações e a integração entre formulário, planilha e Google Drive. O formulário web, desenvolvido com Apps Script, realiza a entrada de dados. Após o envio, os dados são registrados na planilha, os status são atualizados e o Recibo Provisório de Serviço é preenchido automaticamente a partir de um modelo. O documento final é salvo no Google Drive e enviado por e-mail, concluindo o processo de forma integrada.',
         'project2-title': 'Compilador',
         'project2-desc': 'Compilador completo desenvolvido para a disciplina de Compiladores na UFJ.',
         'project3-title': 'Planilha de Controle de Vendas e Gastos',
@@ -497,7 +494,7 @@
         'project11-title': 'Linguagem C',
         'project11-desc': 'Algoritmos desenvolvidos durante o aprendizado da linguagem C.',
         
-        // Links
+
         'project1-link': 'Ver repositório',
         'project2-link': 'Ver repositório',
         'project3-link': 'Ver repositório',
@@ -514,11 +511,11 @@
         'resume-link': 'Currículo',
         'contact-link': 'Contato',
         
-        // Footer
+
         'footer-name': 'Gustavo Santos Teixeira'
       },
       en: {
-        // Titles and headers
+
         'page-title': 'Portfolio - Gustavo Santos Teixeira',
         'name': 'Gustavo Santos Teixeira',
         'degree': 'Computer Science',
@@ -535,15 +532,18 @@
         // Biography
         'bio': 'Hello, my name is <strong>Gustavo</strong>. I hold a Bachelor degree in Computer Science from the Federal University of Jataí (UFJ). Throughout my undergraduate studies, I had the opportunity to explore different programming languages, such as Java, C, C#, and JavaScript. I have a special interest in software development and competitive programming, areas that challenge me and contribute to my continuous learning. I am a collaborative, calm person who enjoys working in teams and values the exchange of experiences and meeting new people.',
         
-        // Academic information
+
         'degree-info': 'Federal University of Jataí (UFJ) • 2022 - 2025',
         
-        // Paper abstract
+
         'paper-abstract': 'Considering the current scenario, it is noted that the electronic games market shows an intense growth rate and a high degree of complexity in its products. This is a sector characterized by continuous development, constant need for innovation and significant investments. In this context, the literature highlights the importance of using specification tools in the early stages of the development process. Among these tools, Petri nets stand out as a qualified alternative for modeling these systems, reinforcing one of the motivations for their use. Given this, this research is based on the question of how to model and analyze the behavior of autonomous agents in video games still in the early stages of development. The main objective is to model and analyze the decision-making processes of autonomous agents in strategy games, through the use of Petri nets formalism. With the development of this research, it was possible to establish a formal representation of the behavior of autonomous agents, enabling the analysis and understanding of these mechanisms in the early stages of the project. The implementation of the model with Colored Petri Nets allowed representing the complexity of this type of system and simulating its operation through the CPN Tools tool. Keywords: Petri Nets. Colored Petri Nets. Modeling. Electronic Games.',
         
-        // Projects
+
         'project1-title': 'Virtual Queue - University Transportation',
         'project1-desc': 'Queue management system for university transportation with REST API and modern interface.',
+        
+        'projeto-automacao-planilha':'Project for an Accounting Firm',
+        'projeto-automacao-descricao':'The project integrates automation, data organization, and document generation using tools from the Google ecosystem. Google Sheets acts as the core of the system, organized into tabs for data entry, storage, and information control. Apps Script concentrates the application logic, including business rules, validations, automations, and the integration between the web form, spreadsheet, and Google Drive. The web form, developed with Apps Script, handles data input. After submission, the data is recorded in the spreadsheet, statuses are updated, and the Provisional Service Receipt is automatically filled out from a template. The final document is saved to Google Drive and sent by email, completing the process in an integrated manner.',
         'project2-title': 'Compiler',
         'project2-desc': 'Complete compiler developed for the Compilers course at UFJ.',
         'project3-title': 'Sales and Expenses Control Spreadsheet',
@@ -565,7 +565,7 @@
         'project11-title': 'C Language',
         'project11-desc': 'Algorithms developed while learning the C language.',
         
-        // Links
+
         'project1-link': 'View repository',
         'project2-link': 'View repository',
         'project3-link': 'View repository',
@@ -587,27 +587,27 @@
       }
     };
 
-    // Estado do idioma
+
     let currentLang = 'pt';
     
-    // Função para alternar idioma
+
     function toggleLanguage() {
       currentLang = currentLang === 'pt' ? 'en' : 'pt';
       applyLanguage(currentLang);
       
-      // Salvar preferência no localStorage
+
       localStorage.setItem('portfolio-language', currentLang);
     }
     
-    // Função para aplicar o idioma
+
     function applyLanguage(lang) {
-      // Atualizar atributo lang do html
+
       document.documentElement.lang = lang;
       
-      // Atualizar título da página
+
       document.getElementById('page-title').textContent = translations[lang]['page-title'];
       
-      // Atualizar todos os elementos com IDs correspondentes
+
       Object.keys(translations[lang]).forEach(key => {
         const element = document.getElementById(key);
         if (element) {
@@ -634,19 +634,19 @@
       }
     }
     
-    // Inicialização
+
     document.addEventListener('DOMContentLoaded', () => {
-      // Configurar botão de idioma
+
       const languageButton = document.getElementById('language-toggle');
       languageButton.addEventListener('click', toggleLanguage);
       
-      // Verificar se há preferência salva
+
       const savedLang = localStorage.getItem('portfolio-language');
       if (savedLang) {
         currentLang = savedLang;
       }
       
-      // Aplicar idioma inicial
+
       applyLanguage(currentLang);
       
       // Abre a primeira seção por padrão
