@@ -6,547 +6,481 @@
   <title id="page-title">Portfólio - Gustavo Santos Teixeira</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     }
-    
-    .main-container {
-      background: #ffffff;
+
+    .timeline-line {
+      position: absolute;
+      left: 7px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: #e5e7eb;
     }
-    
-    .simple-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-    }
-    
-    .section-content {
-      transition: max-height 0.3s ease;
-    }
-    
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      background: #f3f4f6;
-      border-radius: 16px;
-      font-size: 12px;
-      font-weight: 500;
-      color: #6b7280;
-    }
-    
-    .header-plain {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    
-    .language-btn {
-      transition: all 0.3s ease;
-      padding: 8px 16px;
-      font-weight: 500;
-    }
-    
-    .language-btn:hover {
-      transform: scale(1.05);
-      background-color: #e5e7eb;
-    }
-    
-    /* fallback para rotação do ícone */
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-    
-    @media (max-width: 768px) {
-      .project-title {
-        margin-left: 0 !important;
-      }
+
+    .timeline-item:last-child .timeline-line {
+      display: none;
     }
   </style>
 </head>
 
-<body class="bg-gray-200 text-gray-900 min-h-screen flex justify-center items-center p-4 md:p-6">
-  <div class="w-full max-w-3xl main-container rounded-lg border border-gray-200 shadow-sm overflow-hidden">
-    
-    <!-- Cabeçalho -->
-    <header class="header-plain p-8 md:p-10">
-      <div class="max-w-2xl">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <div>
-            <h1 class="text-2xl md:text-3xl font-light tracking-tight mb-2" id="name">Gustavo Santos Teixeira</h1>
-            <div class="flex items-center gap-3">
-              <span class="badge" id="degree">Ciência da Computação</span>
-              <span class="text-gray-400">•</span>
-              <span class="text-sm text-gray-500">UFJ</span>
-            </div>
-          </div>
-          
-          <!-- Botões de idioma e redes sociais -->
-          <div class="flex gap-4 items-center">
-            <button id="language-toggle" class="language-btn flex items-center justify-center rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300" aria-label="Alternar idioma">
-              <span id="language-text">PT/EN</span>
-            </button>
-            
-            <a href="https://github.com/GustavoST868" title="GitHub" 
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b/" title="LinkedIn"
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gustavosantosteixeira98@gmail.com" title="Email"
-               class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-        
-        <div>
-          <p class="text-gray-600 leading-relaxed" id="bio"></p>
-        </div>
-      </div>
-    </header>
+<body class="bg-white text-gray-800">
 
-    <!-- Conteúdo principal -->
-    <main class="px-6 md:px-8 py-8">
-      
-      <!-- Título "Seções" -->
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-xl font-medium" id="sections-title">Seções</h2>
-        <span class="text-sm text-gray-500" id="total-projects"></span>
-      </div>
-      
-      <!-- Seção Programação -->
-      <div class="mb-8">
-        <div class="section mb-4">
-          <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
-               onclick="toggleSection(this)">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
-                <i class="fas fa-code text-gray-600"></i>
-              </div>
-              <span class="font-medium" id="programming-title">Programação</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600" id="programming-count">11 projetos</span>
-            </div>
-            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-          </div>
-          
-          <div class="section-content max-h-0 overflow-hidden">
-            <div class="mt-4 space-y-3">
-              
-              <!-- Projeto 1 (Automação) -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="projeto-automacao-planilha">Projeto para Empresa de Contabilidade</h3>
-                  <span class="text-xs text-gray-500">Google Sheets • Apps Script • JavaScript</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="projeto-automacao-descricao">
-                  O projeto integra automação, organização de dados e geração de documentos utilizando ferramentas do ecossistema Google...
-                </p>
-                <a href="https://github.com/GustavoST868/contabilidade-expert" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project1-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 2: Fila Virtual -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project1-title">Fila Virtual - Transporte Universitário</h3>
-                  <span class="text-xs text-gray-500">Node.js • React • PostgreSQL</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project1-desc">
-                  Sistema de gerenciamento de filas para transporte universitário com API REST e interface moderna.
-                </p>
-                <a href="https://github.com/GustavoST868/filacaj-ufj" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project1-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 3: Compilador -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project2-title">Compilador</h3>
-                  <span class="text-xs text-gray-500">Análise Léxica • Sintática • Semântica</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project2-desc">
-                  Compilador completo desenvolvido para a disciplina de Compiladores na UFJ.
-                </p>
-                <a href="https://github.com/GustavoST868/compilador" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project2-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 4: Planilha de Controle -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project3-title">Planilha de Controle de Vendas e Gastos</h3>
-                  <span class="text-xs text-gray-500">Dashboards • Análise • Controle</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project3-desc">
-                  Sistema completo para controle de vendas, gastos e análise de desempenho empresarial.
-                </p>
-                <a href="https://github.com/GustavoST868/Planilha-de-Controle-de-Gastos" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project3-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 5: Formulário ASP.NET -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project4-title">Formulário de Registro de Dados</h3>
-                  <span class="text-xs text-gray-500">ASP.NET • API • PostgreSQL</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project4-desc">
-                  Sistema de formulários web com operações CRUD completas e integração com banco de dados.
-                </p>
-                <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project4-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 6: Lista de Tarefas Java -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project5-title">Sistema de Listas de Tarefas</h3>
-                  <span class="text-xs text-gray-500">Java • CRUD • Prioridades</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project5-desc">
-                  Algoritmo com funcionalidades de criar, deletar, pesquisar e editar tarefas.
-                </p>
-                <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project5-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 7: API de Usuários -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project6-title">API de Usuários</h3>
-                  <span class="text-xs text-gray-500">Java • Store • UserController</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project6-desc">
-                  Algoritmo com classes para armazenar e carregar usuários e senhas.
-                </p>
-                <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project6-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 8: Formulário Python/Flask -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project7-title">Formulário de Registro Web</h3>
-                  <span class="text-xs text-gray-500">Python • Flask • SQLite</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project7-desc">
-                  Formulário para registro de dados com remoção automática após período de validade.
-                </p>
-                <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project7-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 9: HTML/CSS/JS -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project8-title">HTML, CSS e JavaScript</h3>
-                  <span class="text-xs text-gray-500">Web • Frontend • Exercícios</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project8-desc">
-                  Pequenos projetos para treinar ferramentas de desenvolvimento Web.
-                </p>
-                <a href="https://github.com/GustavoST868/html-css-javascript" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project8-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 10: Python -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project9-title">Python</h3>
-                  <span class="text-xs text-gray-500">Algoritmos • Lógica • Banco de Dados</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project9-desc">
-                  Algoritmos desenvolvidos durante a prática de lógica de programação.
-                </p>
-                <a href="https://github.com/GustavoST868/python" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project9-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 11: Java -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project10-title">Java</h3>
-                  <span class="text-xs text-gray-500">POO • Exercícios • Web</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project10-desc">
-                  Soluções desenvolvidas para praticar lógica de programação em Java.
-                </p>
-                <a href="https://github.com/GustavoST868/java" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project10-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-              
-              <!-- Projeto 12: Linguagem C -->
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <div class="flex items-start justify-between mb-2">
-                  <h3 class="font-medium" id="project11-title">Linguagem C</h3>
-                  <span class="text-xs text-gray-500">Algoritmos • AP1 • AP2</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-3" id="project11-desc">
-                  Algoritmos desenvolvidos durante o aprendizado da linguagem C.
-                </p>
-                <a href="https://github.com/GustavoST868/linguagem-c" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="project11-link">Ver repositório</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Seção Pesquisas -->
-      <div class="mb-8">
-        <div class="section mb-4">
-          <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
-               onclick="toggleSection(this)">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
-                <i class="fas fa-search text-gray-600"></i>
-              </div>
-              <span class="font-medium" id="research-title">Pesquisas</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600" id="research-count">1 artigo</span>
-            </div>
-            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-          </div>
-          
-          <div class="section-content max-h-0 overflow-hidden">
-            <div class="mt-4">
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <h3 class="font-medium mb-2" id="paper-title">
-                  Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão
-                </h3>
-                
-                <div class="flex flex-wrap gap-3 mb-3 text-sm">
-                  <a href="https://doi.org/10.5281/zenodo.17363220" target="_blank"
-                     class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200 text-gray-700">
-                    CONACET DOI
-                  </a>
-                  <a href="https://doi.org/10.5281/zenodo.17512693" target="_blank"
-                     class="px-3 py-1 bg-gray-100 rounded hover:bg-gray-200 text-gray-700">
-                    X CONEP DOI
-                  </a>
-                </div>
-                
-                <div class="mb-4">
-                  <p class="text-gray-600" id="paper-abstract">
-                    Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento...
-                  </p>
-                </div>
-                
-                <a href="https://doi.org/10.5281/zenodo.17363220" target="_blank"
-                   class="text-sm mt-4 text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="paper-link">Ler artigo</span>
-                  <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Seção Formação Acadêmica -->
-      <div>
-        <div class="section mb-4">
-          <div class="flex justify-between items-center p-4 cursor-pointer simple-card rounded-lg hover:bg-gray-50" 
-               onclick="toggleSection(this)">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 flex items-center justify-center bg-gray-100 rounded-lg">
-                <i class="fas fa-graduation-cap text-gray-600"></i>
-              </div>
-              <span class="font-medium" id="academic-title">Formação Acadêmica</span>
-              <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">UFJ</span>
-            </div>
-            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-          </div>
-          
-          <div class="section-content max-h-0 overflow-hidden">
-            <div class="mt-4">
-              <div class="p-4 simple-card rounded-lg hover:bg-gray-50">
-                <h3 class="font-medium mb-2" id="degree-title">Bacharelado em Ciência da Computação</h3>
-                <p class="text-sm text-gray-600 mb-4" id="degree-info">
-                  Universidade Federal de Jataí (UFJ) • 2022 - 2025
-                </p>
-                
-                <div class="mb-4">
-                  <h4 class="text-sm font-medium mb-2" id="courses-title">Disciplinas</h4>
-                  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Algoritmos e Programação</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Arquitetura de Computadores</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Banco de Dados</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Computador e Sociedade</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Empreendedorismo</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Engenharia de Software</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Estágio Curricular Obrigatório</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Estruturas de Dados</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Interface Humano Computador</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Lógica para Ciência da Computação</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Segurança e Auditoria de Sistemas</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Compiladores</div>
-                    <div class="text-dark-subtext text-xs border border-gray-200 rounded px-3 py-2">Tópicos em Computação Aplicada</div>
-                  </div>
-                </div>
-                
-                <a href="https://github.com/GustavoST868/faculdade-UFJ" class="text-sm text-gray-700 flex items-center gap-1 hover:text-blue-600">
-                  <span id="academic-materials">Materiais acadêmicos</span> <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </main>
-    
-    <!-- Rodapé -->
-    <footer class="px-6 md:px-8 py-6 border-t border-gray-200">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+  <!-- Header -->
+  <header class="border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div>
-          <p class="text-sm text-gray-600" id="footer-name">Gustavo Santos Teixeira</p>
-          <p class="text-xs text-gray-500 mt-1" id="footer-tagline"></p>
+          <h1 class="text-3xl md:text-4xl font-light tracking-tight text-gray-900 mb-3" id="name">Gustavo Santos Teixeira</h1>
+          <p class="text-gray-500 text-lg" id="role">Mestrando em Ciência da Computação</p>
         </div>
-        <div class="flex items-center gap-4">
-          <a href="./Currículo - Gustavo Santos Teixeira.pdf" download="Curriculo-Gustavo-Teixeira.pdf" 
-             class="text-sm text-gray-600 flex items-center gap-2 hover:text-blue-600">
-            <i class="fas fa-download text-xs"></i>
-            <span id="resume-link">Currículo</span>
+
+        <div class="flex items-center gap-3">
+          <button id="language-toggle" class="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors" aria-label="Alternar idioma">
+            <span id="language-text">PT/EN</span>
+          </button>
+
+          <a href="https://github.com/GustavoST868" title="GitHub"
+             class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 transition-colors">
+            <i class="fab fa-github text-xl"></i>
           </a>
-          <a href="mailto:gustavosantosteixeira98@gmail.com" 
-             class="text-sm text-gray-600 hover:text-blue-600">
-            <span id="contact-link">Contato</span>
+          <a href="https://www.linkedin.com/in/gustavo-santos-teixeira-0a68b327b/" title="LinkedIn"
+             class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 transition-colors">
+            <i class="fab fa-linkedin-in text-xl"></i>
+          </a>
+          <a href="mailto:gustavosantosteixeira98@gmail.com" title="Email"
+             class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 transition-colors">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+
+          <a href="./Currículo - Gustavo Santos Teixeira.pdf" download="Curriculo-Gustavo-Teixeira.pdf" title="Currículo"
+             class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 transition-colors">
+            <i class="fas fa-file-pdf text-xl"></i>
           </a>
         </div>
       </div>
-    </footer>
-    
-  </div>
+
+      <p class="mt-8 text-gray-600 leading-relaxed max-w-3xl" id="bio"></p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 md:py-16">
+
+    <!-- Projetos -->
+    <section class="mb-20">
+      <h2 class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-8" id="projects-title">Projetos</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Projeto 1 -->
+        <a href="https://github.com/GustavoST868/contabilidade-expert" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj1-title">Automação Contábil</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj1-desc">Automação de processos contábeis com Google Sheets, Apps Script e geração automática de documentos.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Google Sheets</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Apps Script</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">JavaScript</span>
+          </div>
+        </a>
+
+        <!-- Projeto 2 -->
+        <a href="https://github.com/GustavoST868/filacaj-ufj" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj2-title">Fila Virtual</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj2-desc">Sistema de gerenciamento de filas para transporte universitário com API REST.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Node.js</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">React</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">PostgreSQL</span>
+          </div>
+        </a>
+
+        <!-- Projeto 3 -->
+        <a href="https://github.com/GustavoST868/compilador" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj3-title">Compilador</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj3-desc">Compilador completo com análise léxica, sintática e semântica.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">C</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Flex</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Bison</span>
+          </div>
+        </a>
+
+        <!-- Projeto 4 -->
+        <a href="https://github.com/GustavoST868/Planilha-de-Controle-de-Gastos" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj4-title">Dashboard Financeiro</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj4-desc">Sistema de controle de vendas, gastos e análise de desempenho empresarial.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Google Sheets</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Dashboard</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Análise</span>
+          </div>
+        </a>
+
+        <!-- Projeto 5 -->
+        <a href="https://github.com/GustavoST868/formulario-web-asp-net" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj5-title">Formulário ASP.NET</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj5-desc">Sistema de formulários web com operações CRUD e integração com banco de dados.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">ASP.NET</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">API</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">PostgreSQL</span>
+          </div>
+        </a>
+
+        <!-- Projeto 6 -->
+        <a href="https://github.com/GustavoST868/java/tree/main/sistema_de_listas_de_tarefas" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj6-title">Task Manager</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj6-desc">Sistema de listas de tarefas com operações CRUD e prioridades.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Java</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">CRUD</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">POO</span>
+          </div>
+        </a>
+
+        <!-- Projeto 7 -->
+        <a href="https://github.com/GustavoST868/java/tree/main/api-usuarios/API" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj7-title">API de Usuários</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj7-desc">Sistema com classes para armazenar e gerenciar usuários e senhas.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Java</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">API</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">POO</span>
+          </div>
+        </a>
+
+        <!-- Projeto 8 -->
+        <a href="https://github.com/GustavoST868/python/tree/main/formulario_de_registro_web_python" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj8-title">Formulário Web Python</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj8-desc">Formulário para registro de dados com remoção automática após período de validade.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Python</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Flask</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">SQLite</span>
+          </div>
+        </a>
+
+        <!-- Projeto 9 -->
+        <a href="https://github.com/GustavoST868/html-css-javascript" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj9-title">Projetos Web Frontend</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj9-desc">Exercícios e pequenos projetos para treinar desenvolvimento Web.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">HTML</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">CSS</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">JavaScript</span>
+          </div>
+        </a>
+
+        <!-- Projeto 10 -->
+        <a href="https://github.com/GustavoST868/python" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj10-title">Algoritmos Python</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj10-desc">Algoritmos desenvolvidos durante a prática de lógica de programação.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Python</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Algoritmos</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Lógica</span>
+          </div>
+        </a>
+
+        <!-- Projeto 11 -->
+        <a href="https://github.com/GustavoST868/java" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj11-title">Exercícios Java</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj11-desc">Soluções desenvolvidas para praticar lógica de programação em Java.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">Java</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">POO</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Exercícios</span>
+          </div>
+        </a>
+
+        <!-- Projeto 12 -->
+        <a href="https://github.com/GustavoST868/linguagem-c" class="group block p-6 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors">
+          <div class="flex items-start justify-between mb-3">
+            <h3 class="font-medium text-gray-900 group-hover:text-gray-600 transition-colors" id="proj12-title">Algoritmos em C</h3>
+            <i class="fas fa-arrow-up-right-from-square text-gray-300 text-sm group-hover:text-gray-400"></i>
+          </div>
+          <p class="text-sm text-gray-500 mb-4" id="proj12-desc">Algoritmos desenvolvidos durante o aprendizado da linguagem C.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs text-gray-400">C</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">Algoritmos</span>
+            <span class="text-xs text-gray-400">•</span>
+            <span class="text-xs text-gray-400">AP1/AP2</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Mais projetos -->
+      <div class="mt-8 text-center">
+        <a href="https://github.com/GustavoST868" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors">
+          <span id="more-projects">Ver mais no GitHub</span>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Pesquisa -->
+    <section class="mb-20">
+      <h2 class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-8" id="research-section-title">Pesquisa</h2>
+
+      <div class="p-6 border border-gray-100 rounded-lg">
+        <h3 class="font-medium text-gray-900 mb-2" id="paper-title">Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão</h3>
+        <p class="text-sm text-gray-500 mb-4" id="paper-venue">CONACET & X CONEP • 2025</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4" id="paper-abstract">
+          Pesquisa sobre modelagem de comportamento de agentes autônomos em jogos de estratégia utilizando Redes de Petri Coloridas.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://doi.org/10.5281/zenodo.17363220" target="_blank" class="text-sm text-gray-600 hover:text-gray-900 flex items-center gap-1">
+            <span id="paper-link1">DOI CONACET</span>
+            <i class="fas fa-external-link-alt text-xs"></i>
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.17512693" target="_blank" class="text-sm text-gray-600 hover:text-gray-900 flex items-center gap-1">
+            <span id="paper-link2">DOI CONEP</span>
+            <i class="fas fa-external-link-alt text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linha do Tempo Acadêmica -->
+    <section class="mb-20">
+      <h2 class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-8" id="academic-title">Trajetória Acadêmica</h2>
+
+      <div class="space-y-0">
+
+        <!-- Mestrado -->
+        <div class="timeline-item relative pl-8 pb-10">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-gray-900 rounded-full"></div>
+          <div class="timeline-line"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
+            <h3 class="font-medium text-gray-900" id="masters-title">Mestrado em Ciência da Computação</h3>
+            <span class="text-sm text-gray-400" id="masters-date">2026 - Atual</span>
+          </div>
+          <p class="text-sm text-gray-500 mb-1" id="masters-uni">Universidade Federal do Rio Grande do Sul (UFRGS)</p>
+          <p class="text-sm text-gray-600" id="masters-focus">Foco: Inteligência Artificial, Ontologias e Representação do Conhecimento</p>
+        </div>
+
+        <!-- Graduação -->
+        <div class="timeline-item relative pl-8 pb-10">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-gray-300 rounded-full"></div>
+          <div class="timeline-line"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
+            <h3 class="font-medium text-gray-900" id="bachelor-title">Bacharelado em Ciência da Computação</h3>
+            <span class="text-sm text-gray-400" id="bachelor-date">2022 - 2025</span>
+          </div>
+          <p class="text-sm text-gray-500 mb-2" id="bachelor-uni">Universidade Federal de Jataí (UFJ)</p>
+          <p class="text-sm text-gray-600 mb-3" id="bachelor-desc">Formação com ênfase em algoritmos, estruturas de dados, engenharia de software e pesquisa científica.</p>
+          <a href="https://github.com/GustavoST868/faculdade-UFJ" class="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-1">
+            <span id="academic-materials">Materiais acadêmicos</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Ensino Médio -->
+        <div class="timeline-item relative pl-8">
+          <div class="absolute left-0 top-1 w-4 h-4 bg-gray-200 rounded-full"></div>
+
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
+            <h3 class="font-medium text-gray-900" id="hs-title">Ensino Médio</h3>
+            <span class="text-sm text-gray-400" id="hs-date">2019 - 2021</span>
+          </div>
+          <p class="text-sm text-gray-500 mb-1" id="hs-school">Colégio Nossa Senhora da Aparecida (CNSA)</p>
+          <p class="text-sm text-gray-600" id="hs-desc">Formação no ensino médio regular.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p class="text-sm text-gray-400" id="footer-text">Gustavo Santos Teixeira</p>
+        <div class="flex items-center gap-6">
+          <a href="./Currículo - Gustavo Santos Teixeira.pdf" download class="text-sm text-gray-500 hover:text-gray-900 transition-colors" id="resume-link">
+            Currículo
+          </a>
+          <a href="mailto:gustavosantosteixeira98@gmail.com" class="text-sm text-gray-500 hover:text-gray-900 transition-colors" id="contact-link">
+            Contato
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const translations = {
       pt: {
         'page-title': 'Portfólio - Gustavo Santos Teixeira',
         'name': 'Gustavo Santos Teixeira',
-        'degree': 'Ciência da Computação',
-        'sections-title': 'Seções',
-        'programming-title': 'Programação',
-        'programming-count': '11 projetos',
-        'research-title': 'Pesquisas',
-        'research-count': '1 artigo',
-        'academic-title': 'Formação Acadêmica',
-        'courses-title': 'Disciplinas',
-        'degree-title': 'Bacharelado em Ciência da Computação',
+        'role': 'Mestrando em Ciência da Computação',
+        'projects-title': 'Projetos',
+        'proj1-title': 'Automação Contábil',
+        'proj1-desc': 'Automação de processos contábeis com Google Sheets, Apps Script e geração automática de documentos.',
+        'proj2-title': 'Fila Virtual',
+        'proj2-desc': 'Sistema de gerenciamento de filas para transporte universitário com API REST.',
+        'proj3-title': 'Compilador',
+        'proj3-desc': 'Compilador completo com análise léxica, sintática e semântica.',
+        'proj4-title': 'Dashboard Financeiro',
+        'proj4-desc': 'Sistema de controle de vendas, gastos e análise de desempenho empresarial.',
+        'proj5-title': 'Formulário ASP.NET',
+        'proj5-desc': 'Sistema de formulários web com operações CRUD e integração com banco de dados.',
+        'proj6-title': 'Task Manager',
+        'proj6-desc': 'Sistema de listas de tarefas com operações CRUD e prioridades.',
+        'proj7-title': 'API de Usuários',
+        'proj7-desc': 'Sistema com classes para armazenar e gerenciar usuários e senhas.',
+        'proj8-title': 'Formulário Web Python',
+        'proj8-desc': 'Formulário para registro de dados com remoção automática após período de validade.',
+        'proj9-title': 'Projetos Web Frontend',
+        'proj9-desc': 'Exercícios e pequenos projetos para treinar desenvolvimento Web.',
+        'proj10-title': 'Algoritmos Python',
+        'proj10-desc': 'Algoritmos desenvolvidos durante a prática de lógica de programação.',
+        'proj11-title': 'Exercícios Java',
+        'proj11-desc': 'Soluções desenvolvidas para praticar lógica de programação em Java.',
+        'proj12-title': 'Algoritmos em C',
+        'proj12-desc': 'Algoritmos desenvolvidos durante o aprendizado da linguagem C.',
+        'more-projects': 'Ver mais no GitHub',
+        'research-section-title': 'Pesquisa',
         'paper-title': 'Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão',
-        'bio': 'Sou bacharel em Ciência da Computação pela Universidade Federal de Jataí, com graduação concluída em 2025, período em que utilizei linguagens como Python, C e Java e explorei diferentes ferramentas e tecnologias ao longo da formação. Em 2026, iniciei o mestrado em Ciência da Computação na Universidade Federal do Rio Grande do Sul, com foco em Inteligência Artificial e Ontologias, na área de Representação do Conhecimento e modelagem conceitual.',
-        'degree-info': 'Universidade Federal de Jataí (UFJ) • 2022 - 2025',
-        'paper-abstract': 'Considerando o cenário atual, nota-se que o mercado de jogos eletrônicos apresenta um ritmo intenso de crescimento e um elevado grau de complexidade em seus produtos. Trata-se de um setor caracterizado pelo desenvolvimento contínuo, pela necessidade constante de inovação e por investimentos expressivos. Nesse contexto, a literatura evidencia a importância do uso de ferramentas de especificação nas fases iniciais do processo de desenvolvimento. Entre essas ferramentas, as redes de Petri destacam-se como uma alternativa qualificada para a modelagem desses sistemas, reforçando uma das motivações para sua utilização. Diante disso, a presente pesquisa fundamenta-se no questionamento sobre como modelar e analisar o comportamento de agentes autônomos em videogames ainda nas etapas iniciais de desenvolvimento. O objetivo principal consiste em modelar e analisar os processos de tomada de decisão de agentes autônomos em jogos de estratégia, por meio do uso do formalismo das redes de Petri. Com o desenvolvimento desta pesquisa, foi possível constituir uma representação formal do comportamento de agentes autônomos, possibilitando a análise e a compreensão desses mecanismos nas fases iniciais do projeto. A implementação do modelo com Redes de Petri Coloridas permitiu representar a complexidade desse tipo de sistema e simular seu funcionamento por meio da ferramenta CPN Tools. Palavras-chave: Redes de Petri. Redes de Petri Coloridas. Modelagem. Jogos Eletrônicos.',
-        'projeto-automacao-planilha': 'Projeto para Empresa de Contabilidade',
-        'projeto-automacao-descricao': 'O projeto integra automação, organização de dados e geração de documentos utilizando ferramentas do ecossistema Google. O Google Sheets atua como núcleo do sistema, organizado em abas para cadastro, armazenamento e controle das informações. O Apps Script concentra a lógica da aplicação, incluindo regras de negócio, validações, automações e a integração entre formulário, planilha e Google Drive. O formulário web, desenvolvido com Apps Script, realiza a entrada de dados. Após o envio, os dados são registrados na planilha, os status são atualizados e o Recibo Provisório de Serviço é preenchido automaticamente a partir de um modelo. O documento final é salvo no Google Drive e enviado por e-mail, concluindo o processo de forma integrada.',
-        'project1-title': 'Fila Virtual - Transporte Universitário',
-        'project1-desc': 'Sistema de gerenciamento de filas para transporte universitário com API REST e interface moderna.',
-        'project2-title': 'Compilador',
-        'project2-desc': 'Compilador completo desenvolvido para a disciplina de Compiladores na UFJ.',
-        'project3-title': 'Planilha de Controle de Vendas e Gastos',
-        'project3-desc': 'Sistema completo para controle de vendas, gastos e análise de desempenho empresarial.',
-        'project4-title': 'Formulário de Registro de Dados',
-        'project4-desc': 'Sistema de formulários web com operações CRUD completas e integração com banco de dados.',
-        'project5-title': 'Sistema de Listas de Tarefas',
-        'project5-desc': 'Algoritmo com funcionalidades de criar, deletar, pesquisar e editar tarefas.',
-        'project6-title': 'API de Usuários',
-        'project6-desc': 'Algoritmo com classes para armazenar e carregar usuários e senhas.',
-        'project7-title': 'Formulário de Registro Web',
-        'project7-desc': 'Formulário para registro de dados com remoção automática após período de validade.',
-        'project8-title': 'HTML, CSS e JavaScript',
-        'project8-desc': 'Pequenos projetos para treinar ferramentas de desenvolvimento Web.',
-        'project9-title': 'Python',
-        'project9-desc': 'Algoritmos desenvolvidos durante a prática de lógica de programação.',
-        'project10-title': 'Java',
-        'project10-desc': 'Soluções desenvolvidas para praticar lógica de programação em Java.',
-        'project11-title': 'Linguagem C',
-        'project11-desc': 'Algoritmos desenvolvidos durante o aprendizado da linguagem C.',
-        'project1-link': 'Ver repositório',
-        'project2-link': 'Ver repositório',
-        'project3-link': 'Ver repositório',
-        'project4-link': 'Ver repositório',
-        'project5-link': 'Ver repositório',
-        'project6-link': 'Ver repositório',
-        'project7-link': 'Ver repositório',
-        'project8-link': 'Ver repositório',
-        'project9-link': 'Ver repositório',
-        'project10-link': 'Ver repositório',
-        'project11-link': 'Ver repositório',
-        'paper-link': 'Ler artigo',
+        'paper-venue': 'CONACET & X CONEP • 2025',
+        'paper-abstract': 'Pesquisa sobre modelagem de comportamento de agentes autônomos em jogos de estratégia utilizando Redes de Petri Coloridas.',
+        'paper-link1': 'DOI CONACET',
+        'paper-link2': 'DOI CONEP',
+        'academic-title': 'Trajetória Acadêmica',
+        'masters-title': 'Mestrado em Ciência da Computação',
+        'masters-date': '2026 - Atual',
+        'masters-uni': 'Universidade Federal do Rio Grande do Sul (UFRGS)',
+        'masters-focus': 'Foco: Inteligência Artificial, Ontologias e Representação do Conhecimento',
+        'bachelor-title': 'Bacharelado em Ciência da Computação',
+        'bachelor-date': '2022 - 2025',
+        'bachelor-uni': 'Universidade Federal de Jataí (UFJ)',
+        'bachelor-desc': 'Formação com ênfase em algoritmos, estruturas de dados, engenharia de software e pesquisa científica.',
+        'hs-title': 'Ensino Médio',
+        'hs-date': '2019 - 2021',
+        'hs-school': 'Colégio Nossa Senhora da Aparecida (CNSA)',
+        'hs-desc': 'Formação no ensino médio regular.',
         'academic-materials': 'Materiais acadêmicos',
+        'footer-text': 'Gustavo Santos Teixeira',
         'resume-link': 'Currículo',
         'contact-link': 'Contato',
-        'footer-name': 'Gustavo Santos Teixeira'
+        'bio': 'Sou bacharel em Ciência da Computação pela Universidade Federal de Jataí, com graduação concluída em 2025, período em que utilizei linguagens como Python, C e Java e explorei diferentes ferramentas e tecnologias ao longo da formação. Em 2026, iniciei o mestrado em Ciência da Computação na Universidade Federal do Rio Grande do Sul, com foco em Inteligência Artificial e Ontologias, na área de Representação do Conhecimento e modelagem conceitual.'
       },
       en: {
         'page-title': 'Portfolio - Gustavo Santos Teixeira',
         'name': 'Gustavo Santos Teixeira',
-        'degree': 'Computer Science',
-        'sections-title': 'Sections',
-        'programming-title': 'Programming',
-        'programming-count': '11 projects',
-        'research-title': 'Research',
-        'research-count': '1 article',
-        'academic-title': 'Academic Education',
-        'courses-title': 'Courses',
-        'degree-title': 'Bachelor in Computer Science',
+        'role': 'MSc Student in Computer Science',
+        'projects-title': 'Projects',
+        'proj1-title': 'Accounting Automation',
+        'proj1-desc': 'Automation of accounting processes with Google Sheets, Apps Script and automatic document generation.',
+        'proj2-title': 'Virtual Queue',
+        'proj2-desc': 'Queue management system for university transportation with REST API.',
+        'proj3-title': 'Compiler',
+        'proj3-desc': 'Complete compiler with lexical, syntactic and semantic analysis.',
+        'proj4-title': 'Financial Dashboard',
+        'proj4-desc': 'System for sales control, expenses and business performance analysis.',
+        'proj5-title': 'ASP.NET Form',
+        'proj5-desc': 'Web form system with CRUD operations and database integration.',
+        'proj6-title': 'Task Manager',
+        'proj6-desc': 'Task list system with CRUD operations and priorities.',
+        'proj7-title': 'Users API',
+        'proj7-desc': 'System with classes to store and manage users and passwords.',
+        'proj8-title': 'Web Form Python',
+        'proj8-desc': 'Data registration form with automatic removal after validity period.',
+        'proj9-title': 'Frontend Web Projects',
+        'proj9-desc': 'Exercises and small projects to practice Web development.',
+        'proj10-title': 'Python Algorithms',
+        'proj10-desc': 'Algorithms developed during programming logic practice.',
+        'proj11-title': 'Java Exercises',
+        'proj11-desc': 'Solutions developed to practice programming logic in Java.',
+        'proj12-title': 'C Algorithms',
+        'proj12-desc': 'Algorithms developed while learning the C language.',
+        'more-projects': 'View more on GitHub',
+        'research-section-title': 'Research',
         'paper-title': 'Formal Modeling and Analysis of Strategy Games with Decision Making',
-        'bio': "I hold a Bachelor's degree in Computer Science from the Federal University of Jataí, completed in 2025, during which I worked with languages such as Python, C, and Java, and explored various tools and technologies throughout my studies. In 2026, I began a Master's degree in Computer Science at the Federal University of Rio Grande do Sul, focusing on Artificial Intelligence and Ontologies, in the area of Knowledge Representation and conceptual modeling.",
-        'degree-info': 'Federal University of Jataí (UFJ) • 2022 - 2025',
-        'paper-abstract': 'Considering the current scenario, it is noted that the electronic games market shows an intense growth rate and a high degree of complexity in its products. This is a sector characterized by continuous development, constant need for innovation and significant investments. In this context, the literature highlights the importance of using specification tools in the early stages of the development process. Among these tools, Petri nets stand out as a qualified alternative for modeling these systems, reinforcing one of the motivations for their use. Given this, this research is based on the question of how to model and analyze the behavior of autonomous agents in video games still in the early stages of development. The main objective is to model and analyze the decision-making processes of autonomous agents in strategy games, through the use of Petri nets formalism. With the development of this research, it was possible to establish a formal representation of the behavior of autonomous agents, enabling the analysis and understanding of these mechanisms in the early stages of the project. The implementation of the model with Colored Petri Nets allowed representing the complexity of this type of system and simulating its operation through the CPN Tools tool. Keywords: Petri Nets. Colored Petri Nets. Modeling. Electronic Games.',
-        'projeto-automacao-planilha': 'Project for an Accounting Firm',
-        'projeto-automacao-descricao': 'The project integrates automation, data organization, and document generation using tools from the Google ecosystem. Google Sheets acts as the core of the system, organized into tabs for data entry, storage, and information control. Apps Script concentrates the application logic, including business rules, validations, automations, and the integration between the web form, spreadsheet, and Google Drive. The web form, developed with Apps Script, handles data input. After submission, the data is recorded in the spreadsheet, statuses are updated, and the Provisional Service Receipt is automatically filled out from a template. The final document is saved to Google Drive and sent by email, completing the process in an integrated manner.',
-        'project1-title': 'Virtual Queue - University Transportation',
-        'project1-desc': 'Queue management system for university transportation with REST API and modern interface.',
-        'project2-title': 'Compiler',
-        'project2-desc': 'Complete compiler developed for the Compilers course at UFJ.',
-        'project3-title': 'Sales and Expenses Control Spreadsheet',
-        'project3-desc': 'Complete system for sales control, expenses and business performance analysis.',
-        'project4-title': 'Data Registration Form',
-        'project4-desc': 'Web form system with complete CRUD operations and database integration.',
-        'project5-title': 'Task List System',
-        'project5-desc': 'Algorithm with functionality to create, delete, search and edit tasks.',
-        'project6-title': 'Users API',
-        'project6-desc': 'Algorithm with classes to store and load users and passwords.',
-        'project7-title': 'Web Registration Form',
-        'project7-desc': 'Form for data registration with automatic removal after validity period.',
-        'project8-title': 'HTML, CSS and JavaScript',
-        'project8-desc': 'Small projects to train Web development tools.',
-        'project9-title': 'Python',
-        'project9-desc': 'Algorithms developed during programming logic practice.',
-        'project10-title': 'Java',
-        'project10-desc': 'Solutions developed to practice programming logic in Java.',
-        'project11-title': 'C Language',
-        'project11-desc': 'Algorithms developed while learning the C language.',
-        'project1-link': 'View repository',
-        'project2-link': 'View repository',
-        'project3-link': 'View repository',
-        'project4-link': 'View repository',
-        'project5-link': 'View repository',
-        'project6-link': 'View repository',
-        'project7-link': 'View repository',
-        'project8-link': 'View repository',
-        'project9-link': 'View repository',
-        'project10-link': 'View repository',
-        'project11-link': 'View repository',
-        'paper-link': 'Read article',
+        'paper-venue': 'CONACET & X CONEP • 2025',
+        'paper-abstract': 'Research on modeling autonomous agent behavior in strategy games using Colored Petri Nets.',
+        'paper-link1': 'DOI CONACET',
+        'paper-link2': 'DOI CONEP',
+        'academic-title': 'Academic Journey',
+        'masters-title': 'MSc in Computer Science',
+        'masters-date': '2026 - Present',
+        'masters-uni': 'Federal University of Rio Grande do Sul (UFRGS)',
+        'masters-focus': 'Focus: Artificial Intelligence, Ontologies and Knowledge Representation',
+        'bachelor-title': 'Bachelor in Computer Science',
+        'bachelor-date': '2022 - 2025',
+        'bachelor-uni': 'Federal University of Jataí (UFJ)',
+        'bachelor-desc': 'Degree with emphasis on algorithms, data structures, software engineering and scientific research.',
+        'hs-title': 'High School',
+        'hs-date': '2019 - 2021',
+        'hs-school': 'Colégio Nossa Senhora da Aparecida (CNSA)',
+        'hs-desc': 'Regular high school education.',
         'academic-materials': 'Academic materials',
+        'footer-text': 'Gustavo Santos Teixeira',
         'resume-link': 'Resume',
         'contact-link': 'Contact',
-        'footer-name': 'Gustavo Santos Teixeira'
+        'bio': "I hold a Bachelor's degree in Computer Science from the Federal University of Jataí, completed in 2025, during which I worked with languages such as Python, C, and Java, and explored various tools and technologies throughout my studies. In 2026, I began a Master's degree in Computer Science at the Federal University of Rio Grande do Sul, focusing on Artificial Intelligence and Ontologies, in the area of Knowledge Representation and conceptual modeling."
       }
     };
 
@@ -561,27 +495,13 @@
     function applyLanguage(lang) {
       document.documentElement.lang = lang;
       document.getElementById('page-title').textContent = translations[lang]['page-title'];
-      
+
       Object.keys(translations[lang]).forEach(key => {
         const element = document.getElementById(key);
         if (element) {
           element.textContent = translations[lang][key];
         }
       });
-    }
-
-    function toggleSection(header) {
-      const section = header.closest('.section');
-      const content = section.querySelector('.section-content');
-      const icon = header.querySelector('.fa-chevron-down');
-      
-      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-        content.style.maxHeight = '0px';
-        icon.classList.remove('rotate-180');
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.classList.add('rotate-180');
-      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -592,17 +512,8 @@
       if (savedLang) {
         currentLang = savedLang;
       }
-      
-      applyLanguage(currentLang);
 
-      // Abre a primeira seção por padrão
-      const firstSection = document.querySelector('.section');
-      if (firstSection) {
-        const content = firstSection.querySelector('.section-content');
-        const icon = firstSection.querySelector('.fa-chevron-down');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        icon.classList.add('rotate-180');
-      }
+      applyLanguage(currentLang);
     });
   </script>
 </body>
