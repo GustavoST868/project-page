@@ -103,6 +103,9 @@
         <button class="tab" role="tab" id="tab-research" aria-controls="panel-research" data-tab="research">
           <span id="research-section-title">Pesquisa</span>
         </button>
+        <button class="tab" role="tab" id="tab-events" aria-controls="panel-events" data-tab="events">
+          <span id="events-title">Eventos</span>
+        </button>
         <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" data-tab="education">
           <span id="academic-title">Formação</span>
         </button>
@@ -210,6 +213,11 @@
           </a>
         </div>
       </article>
+    </section>
+
+    <!-- Eventos -->
+    <section id="panel-events" class="panel" role="tabpanel" aria-labelledby="tab-events" hidden>
+      <div class="space-y-16" id="event-list"></div>
     </section>
 
     <!-- Formação -->
@@ -356,6 +364,74 @@
         en: ['Frontend Web', 'Exercises and small projects to practice web development.'] }
     ];
 
+    // Eventos: texto curto e fotos (object-position ajusta o recorte da miniatura)
+    const events = [
+      { photos: [
+          { src: './events/ontobras/ontobras1.jpeg',
+            pt: 'Apresentação do short paper OntoNAS', en: 'Presenting the OntoNAS short paper' },
+          { src: './events/ontobras/ontobras2.jpg', pos: 'center 30%',
+            pt: 'Pôster sobre a ontologia do sistema petrolífero', en: 'Poster on the petroleum system ontology' },
+          { src: './events/ontobras/ontobras3.jpg',
+            pt: 'Com colegas da UFRGS', en: 'With colleagues from UFRGS' }
+        ],
+        pt: {
+          venue: 'ONTOBRAS 2026 · Setembro',
+          title: 'Seminário de Pesquisa em Ontologias no Brasil',
+          roles: ['Short paper', 'Pôster'],
+          text: 'Participei do ONTOBRAS 2026, realizado junto ao FOIS 2026, apresentando dois trabalhos. O short paper “OntoNAS: A UFO-Based Ontology for Neural Architecture Search”, apresentado em sessão oral, propõe uma ontologia fundamentada na UFO para descrever a busca por arquiteturas de redes neurais. Já o pôster “Ontological Modeling of the Petroleum System with the Basic Formal Ontology” apresenta uma ontologia do sistema petrolífero fundamentada na Basic Formal Ontology (BFO) e na GeoCore.'
+        },
+        en: {
+          venue: 'ONTOBRAS 2026 · September',
+          title: 'Brazilian Ontology Research Seminar',
+          roles: ['Short paper', 'Poster'],
+          text: 'I took part in ONTOBRAS 2026, held jointly with FOIS 2026, presenting two works. The short paper “OntoNAS: A UFO-Based Ontology for Neural Architecture Search”, presented in an oral session, proposes a UFO-grounded ontology to describe neural architecture search. The poster “Ontological Modeling of the Petroleum System with the Basic Formal Ontology” presents an ontology of the petroleum system grounded in the Basic Formal Ontology (BFO) and GeoCore.'
+        } },
+      { photos: [
+          { src: './events/sbc/sbc4.jpeg',
+            pt: 'Equipe de voluntários do CSBC 2026', en: 'CSBC 2026 volunteer team' },
+          { src: './events/sbc/sbc3.jpeg',
+            pt: 'Organizadores e voluntários', en: 'Organizers and volunteers' },
+          { src: './events/sbc/sbc5.jpeg',
+            pt: 'Equipe e participantes do CSBC 2026', en: 'CSBC 2026 team and attendees' }
+        ],
+        pt: {
+          venue: 'CSBC 2026',
+          title: 'Congresso da Sociedade Brasileira de Computação',
+          roles: ['Voluntário'],
+          text: 'Atuei como voluntário na organização do 46º CSBC, o congresso anual da Sociedade Brasileira de Computação, que teve como tema “Transformação Digital para um Mundo em Emergência Climática”. Fazer parte da equipe que colocou o evento de pé foi uma ótima oportunidade de conhecer por dentro a comunidade de computação do país.'
+        },
+        en: {
+          venue: 'CSBC 2026',
+          title: 'Congress of the Brazilian Computer Society',
+          roles: ['Volunteer'],
+          text: 'I volunteered in the organization of the 46th CSBC, the annual congress of the Brazilian Computer Society, themed “Digital Transformation for a World in Climate Emergency”. Being part of the team that made the event happen was a great chance to see the Brazilian computing community from the inside.'
+        } }
+    ];
+
+    function renderEvents(lang) {
+      document.getElementById('event-list').innerHTML = events.map(ev => `
+        <article>
+          <p class="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">${ev[lang].venue}</p>
+          <h3 class="text-xl font-normal text-gray-900 leading-snug mb-3">${ev[lang].title}</h3>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            ${ev[lang].roles.map(r => `<span class="px-2 py-0.5 text-xs text-gray-500 bg-gray-50 rounded">${r}</span>`).join('')}
+          </div>
+          <p class="text-gray-600 leading-relaxed max-w-2xl mb-6">${ev[lang].text}</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            ${ev.photos.map(ph => `
+            <figure class="first:col-span-2 sm:first:col-span-1">
+              <button type="button" class="event-photo block w-full overflow-hidden rounded-lg cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                      data-src="${ph.src}" data-alt="${ph[lang]}" aria-label="${ph[lang]}">
+                <img src="${ph.src}" alt="${ph[lang]}" loading="lazy"
+                     class="w-full aspect-[4/3] object-cover bg-gray-100 transition-transform duration-300 hover:scale-[1.03]"
+                     style="object-position: ${ph.pos || 'center'}" />
+              </button>
+              <figcaption class="mt-1.5 text-xs text-gray-400 leading-snug">${ph[lang]}</figcaption>
+            </figure>`).join('')}
+          </div>
+        </article>`).join('');
+    }
+
     function renderProjects(lang) {
       document.getElementById('project-count').textContent = projects.length;
 
@@ -396,6 +472,7 @@
         'projects-title': 'Projetos',
         'more-projects': 'Ver mais no GitHub',
         'research-section-title': 'Pesquisa',
+        'events-title': 'Eventos',
         'paper-title': 'Modelagem e Análise Formal de Jogos de Estratégia com Tomadas de Decisão',
         'paper-venue': 'CONACET & X CONEP • 2025',
         'paper-abstract': 'Pesquisa sobre modelagem de comportamento de agentes autônomos em jogos de estratégia utilizando Redes de Petri Coloridas.',
@@ -437,6 +514,7 @@
         'projects-title': 'Projects',
         'more-projects': 'View more on GitHub',
         'research-section-title': 'Research',
+        'events-title': 'Events',
         'paper-title': 'Formal Modeling and Analysis of Strategy Games with Decision Making',
         'paper-venue': 'CONACET & X CONEP • 2025',
         'paper-abstract': 'Research on modeling autonomous agent behavior in strategy games using Colored Petri Nets.',
@@ -497,6 +575,7 @@
       document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
       document.getElementById('page-title').textContent = translations[lang]['page-title'];
       renderProjects(lang);
+      renderEvents(lang);
 
       Object.keys(translations[lang]).forEach(key => {
         const element = document.getElementById(key);
@@ -506,13 +585,22 @@
       });
     }
 
-    // Foto ampliada: carrega a imagem original só na primeira abertura
+    // Foto ampliada: carrega a imagem só ao abrir; o mesmo diálogo serve ao perfil e aos eventos
     const photoDialog = document.getElementById('photo-dialog');
     const photoFull = photoDialog.querySelector('img');
+    const profilePhoto = { src: photoFull.dataset.src, alt: photoFull.alt };
 
-    document.getElementById('photo-open').addEventListener('click', () => {
-      if (!photoFull.src) photoFull.src = photoFull.dataset.src;
+    function openPhoto(src, alt) {
+      photoFull.src = src;
+      photoFull.alt = alt;
+      photoDialog.setAttribute('aria-label', alt);
       photoDialog.showModal();
+    }
+
+    document.getElementById('photo-open').addEventListener('click', () => openPhoto(profilePhoto.src, profilePhoto.alt));
+    document.getElementById('event-list').addEventListener('click', e => {
+      const btn = e.target.closest('.event-photo');
+      if (btn) openPhoto(btn.dataset.src, btn.dataset.alt);
     });
     document.getElementById('photo-close').addEventListener('click', () => photoDialog.close());
     // Clique fora da foto (no fundo escurecido) fecha
